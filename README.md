@@ -1,7 +1,8 @@
-#  Práctica elaboracion de un proyecto de genómica aplicada   
+#  Título
+_**Práctica elaboracion de un proyecto de genómica aplicada**_   
 
 #  Autor  
-_ Cristal Muñoz Rojas _  
+_Cristal Muñoz Rojas_  
 - Chilena 
 - Ingeniero en Biotecnología  
 
