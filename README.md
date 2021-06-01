@@ -11,6 +11,9 @@ _Cristal Muñoz Rojas_
 **Sexo**: femenino  
 **Secuenciación**: completa 
 
-### **Estadísticas globales**
+### **Estadísticas globales**  
 
+| Longitud total de la secuencia |	1.053.332.251 |
+| Numero de contigs	| 677 |
+| Número total de cromosomas y plásmidos | 42 |
 
