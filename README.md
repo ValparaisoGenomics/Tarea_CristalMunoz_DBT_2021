@@ -7,7 +7,7 @@ _Cristal Muñoz Rojas_
 
 ## _**Descripción**_   
 
-**Especie**: _Gallus gallus_ 
+**Especie**: _Gallus gallus_   
 **Sexo**: femenino  
 **Secuenciación**: completa 
 
