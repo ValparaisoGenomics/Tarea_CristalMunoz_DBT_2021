@@ -7,11 +7,9 @@ _Cristal Muñoz Rojas_
 
 ## _**Descripción**_   
 
-**Organismo**: Gallus gallus (chicken)  
+**Especie**: Gallus gallus (chicken)  
 **Sexo**: femenino  
-**Tipo de montaje**: haploide (pseudohaplotipo principal de diploide)  
-**Nivel de montaje**: Cromosoma  
-**Representación del genoma**: completo  
+**Secuenciación**: completa 
 
 ### **Estadísticas globales**
 
