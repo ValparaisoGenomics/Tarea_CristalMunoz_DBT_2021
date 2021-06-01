@@ -1,10 +1,18 @@
-#  Título
-_**Práctica elaboracion de un proyecto de genómica aplicada**_   
+# _**Práctica elaboracion de un proyecto de genómica aplicada**_   
 
-#  Autor  
+### _**Autor**_  
 _Cristal Muñoz Rojas_  
 - Chilena 
 - Ingeniero en Biotecnología  
 
-# Descripción   
-A completar 
+## _**Descripción**_   
+
+**Organismo**: Gallus gallus (chicken)
+**Sexo**: femenino
+**Tipo de montaje**: haploide (pseudohaplotipo principal de diploide)
+**Nivel de montaje**: Cromosoma
+**Representación del genoma**: completo
+
+###**Estadísticas globales**
+
+
