@@ -39,7 +39,7 @@ Este estudio compara la microbiota cecal de pollos de engorde, ponedoras e inter
 |	Fecha de registro | 24 de mayo de 2021 |
 | Relevancia |	Agrícola |
 
-_Links_: 
+_Links_:   
 https://www.ncbi.nlm.nih.gov/assembly/GCF_016699485.2  
 https://www.ncbi.nlm.nih.gov/nuccore/NM_001004390.2  
 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245  
