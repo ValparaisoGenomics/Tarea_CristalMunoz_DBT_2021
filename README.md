@@ -39,6 +39,20 @@ Este estudio compara la microbiota cecal de pollos de engorde, ponedoras e inter
 |	Fecha de registro | 24 de mayo de 2021 |
 | Relevancia |	Agrícola |
 
+**Project Data**
+
+| Resource Name	| Number of Links |
+|  :---  |  :---  | 
+| SRA Experiments |	33 |
+| BioSample |	99 |
+
+**SRA Data Details**
+
+| Data volume, Gbases |	1 |
+|  :---  |  :---  | 
+| Data volume, Mbytes |	270 |
+
+
 _Links_:   
 https://www.ncbi.nlm.nih.gov/assembly/GCF_016699485.2  
 https://www.ncbi.nlm.nih.gov/nuccore/NM_001004390.2  
