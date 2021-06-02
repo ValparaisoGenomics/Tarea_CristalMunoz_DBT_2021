@@ -40,8 +40,8 @@ Este estudio compara la microbiota cecal de pollos de engorde, ponedoras e inter
 | Relevancia |	Agrícola |
 
 _Links_: 
-https://www.ncbi.nlm.nih.gov/assembly/GCF_016699485.2
-https://www.ncbi.nlm.nih.gov/nuccore/NM_001004390.2
-https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245
+https://www.ncbi.nlm.nih.gov/assembly/GCF_016699485.2  
+https://www.ncbi.nlm.nih.gov/nuccore/NM_001004390.2  
+https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245  
 
 
