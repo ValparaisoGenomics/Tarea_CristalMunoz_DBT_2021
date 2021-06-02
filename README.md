@@ -21,11 +21,11 @@ _Cristal Muñoz Rojas_
 
 ### Refseq
 
-**Locus**: NM_001004390 ARNm de 549 pb lineal VRT 26-APR-2021 
-**Definición** Gallus gallus hemoglobina beta, subunidad rho (HBBR), ARNm. 
-**Referencia 1, autores**: Hoffmann FG, Storz JF, Gorr TA y Opazo JC.
-**Título**: Patrones específicos de linaje de diversificación funcional en las familias de genes de alfa y beta globina de vertebrados tetrápodos 
-**Revista**: Mol Biol Evol 27 (5), 1126-1138 (2010) 
+**Locus**: NM_001004390 ARNm de 549 pb lineal VRT 26-APR-2021   
+**Definición** Gallus gallus hemoglobina beta, subunidad rho (HBBR), ARNm.   
+**Referencia 1, autores**: Hoffmann FG, Storz JF, Gorr TA y Opazo JC.  
+**Título**: Patrones específicos de linaje de diversificación funcional en las familias de genes de alfa y beta globina de vertebrados tetrápodos   
+**Revista**: Mol Biol Evol 27 (5), 1126-1138 (2010)   
 
 ### SRA
 
