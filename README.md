@@ -58,4 +58,30 @@ https://www.ncbi.nlm.nih.gov/assembly/GCF_016699485.2
 https://www.ncbi.nlm.nih.gov/nuccore/NM_001004390.2  
 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245  
 
+## **INSTALACIÓN Y CONFIGURACIÓN DE SOFTWARE PARA ACCESO REMOTO Y TRANSFERENCIA DE ARCHIVOS**
+
+- **PuTTY**
+
+
+
+
+
+- **WinSCP**
+
+
+
+## **ACCESO REMOTO A SERVIDOR POMEO**
+
+- **SSH**
+
+## **INSTALACIÓN Y CONFIGURACIÓN CONDA, NANO Y SRA TOOLKIT**
+
+- **Miniconda3**
+- **nano**
+- **SRA Toolkit**
+
+## PRÁCTICA DE SHELL Y LINUX
+
+## PRÁCTICA DESCARGA DE SECUENCIAS NGS CON SRA TOOLKIT
+
 
