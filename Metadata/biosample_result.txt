@@ -1,0 +1,594 @@
+
+1. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324102; Sample name: L34; SRA: SRS9076165
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324102	ID: 19324102
+
+2. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324101; Sample name: L32; SRA: SRS9076164
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324101	ID: 19324101
+
+3. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324100; Sample name: L28; SRA: SRS9076163
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324100	ID: 19324100
+
+4. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324099; Sample name: L26; SRA: SRS9076161
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324099	ID: 19324099
+
+5. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324098; Sample name: L22; SRA: SRS9076160
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324098	ID: 19324098
+
+6. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324097; Sample name: L20; SRA: SRS9076159
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324097	ID: 19324097
+
+7. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324096; Sample name: L16; SRA: SRS9076158
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324096	ID: 19324096
+
+8. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324095; Sample name: L14; SRA: SRS9076157
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324095	ID: 19324095
+
+9. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324094; Sample name: L10; SRA: SRS9076156
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324094	ID: 19324094
+
+10. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324093; Sample name: L8; SRA: SRS9076155
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324093	ID: 19324093
+
+11. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324092; Sample name: L4; SRA: SRS9076154
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324092	ID: 19324092
+
+12. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324091; Sample name: L2; SRA: SRS9076153
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324091	ID: 19324091
+
+13. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324090; Sample name: C42; SRA: SRS9076152
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324090	ID: 19324090
+
+14. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324089; Sample name: C40; SRA: SRS9076150
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324089	ID: 19324089
+
+15. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324088; Sample name: C38; SRA: SRS9076149
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324088	ID: 19324088
+
+16. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324087; Sample name: C35; SRA: SRS9076148
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324087	ID: 19324087
+
+17. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324086; Sample name: C31; SRA: SRS9076147
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324086	ID: 19324086
+
+18. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324085; Sample name: C23; SRA: SRS9076146
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324085	ID: 19324085
+
+19. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324084; Sample name: C19; SRA: SRS9076145
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324084	ID: 19324084
+
+20. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324083; Sample name: C13; SRA: SRS9076144
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324083	ID: 19324083
+
+21. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324082; Sample name: C11; SRA: SRS9076143
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324082	ID: 19324082
+
+22. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324081; Sample name: C7; SRA: SRS9076142
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324081	ID: 19324081
+
+23. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324080; Sample name: B36; SRA: SRS9076141
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324080	ID: 19324080
+
+24. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324079; Sample name: B33; SRA: SRS9076171
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324079	ID: 19324079
+
+25. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324078; Sample name: B30; SRA: SRS9076170
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324078	ID: 19324078
+
+26. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324077; Sample name: B27; SRA: SRS9076169
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324077	ID: 19324077
+
+27. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324076; Sample name: B24; SRA: SRS9076168
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324076	ID: 19324076
+
+28. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324075; Sample name: B21; SRA: SRS9076167
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324075	ID: 19324075
+
+29. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324074; Sample name: B18; SRA: SRS9076166
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324074	ID: 19324074
+
+30. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324073; Sample name: B12; SRA: SRS9076162
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324073	ID: 19324073
+
+31. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324072; Sample name: B9; SRA: SRS9076151
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324072	ID: 19324072
+
+32. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324071; Sample name: B6; SRA: SRS9076140
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324071	ID: 19324071
+
+33. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19324070; Sample name: B3; SRA: SRS9076139
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19324070	ID: 19324070
+
+34. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323943; Sample name: L34_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323943	ID: 19323943
+
+35. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323942; Sample name: L34_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323942	ID: 19323942
+
+36. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323941; Sample name: L32_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323941	ID: 19323941
+
+37. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323940; Sample name: L32_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323940	ID: 19323940
+
+38. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323939; Sample name: L28_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323939	ID: 19323939
+
+39. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323938; Sample name: L28_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323938	ID: 19323938
+
+40. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323937; Sample name: L26_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323937	ID: 19323937
+
+41. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323936; Sample name: L26_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323936	ID: 19323936
+
+42. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323935; Sample name: L22_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323935	ID: 19323935
+
+43. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323934; Sample name: L22_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323934	ID: 19323934
+
+44. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323933; Sample name: L20_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323933	ID: 19323933
+
+45. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323932; Sample name: L20_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323932	ID: 19323932
+
+46. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323931; Sample name: L16_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323931	ID: 19323931
+
+47. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323930; Sample name: L16_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323930	ID: 19323930
+
+48. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323929; Sample name: L14_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323929	ID: 19323929
+
+49. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323928; Sample name: L14_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323928	ID: 19323928
+
+50. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323927; Sample name: L10_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323927	ID: 19323927
+
+51. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323926; Sample name: L10_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323926	ID: 19323926
+
+52. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323925; Sample name: L8_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323925	ID: 19323925
+
+53. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323924; Sample name: L8_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323924	ID: 19323924
+
+54. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323923; Sample name: L4_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323923	ID: 19323923
+
+55. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323922; Sample name: L4_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323922	ID: 19323922
+
+56. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323921; Sample name: L2_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323921	ID: 19323921
+
+57. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323920; Sample name: L2_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323920	ID: 19323920
+
+58. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323919; Sample name: C42_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323919	ID: 19323919
+
+59. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323918; Sample name: C42_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323918	ID: 19323918
+
+60. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323917; Sample name: C40_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323917	ID: 19323917
+
+61. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323916; Sample name: C40_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323916	ID: 19323916
+
+62. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323915; Sample name: C38_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323915	ID: 19323915
+
+63. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323914; Sample name: C38_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323914	ID: 19323914
+
+64. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323913; Sample name: C35_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323913	ID: 19323913
+
+65. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323912; Sample name: C35_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323912	ID: 19323912
+
+66. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323911; Sample name: C31_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323911	ID: 19323911
+
+67. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323910; Sample name: C31_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323910	ID: 19323910
+
+68. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323909; Sample name: C23_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323909	ID: 19323909
+
+69. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323908; Sample name: C23_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323908	ID: 19323908
+
+70. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323907; Sample name: C19_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323907	ID: 19323907
+
+71. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323906; Sample name: C19_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323906	ID: 19323906
+
+72. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323905; Sample name: C13_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323905	ID: 19323905
+
+73. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323904; Sample name: C13_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323904	ID: 19323904
+
+74. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323903; Sample name: C11_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323903	ID: 19323903
+
+75. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323902; Sample name: C11_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323902	ID: 19323902
+
+76. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323901; Sample name: C7_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323901	ID: 19323901
+
+77. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323900; Sample name: C7_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323900	ID: 19323900
+
+78. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323899; Sample name: B36_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323899	ID: 19323899
+
+79. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323898; Sample name: B36_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323898	ID: 19323898
+
+80. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323897; Sample name: B33_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323897	ID: 19323897
+
+81. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323896; Sample name: B33_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323896	ID: 19323896
+
+82. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323895; Sample name: B30_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323895	ID: 19323895
+
+83. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323894; Sample name: B30_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323894	ID: 19323894
+
+84. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323893; Sample name: B27_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323893	ID: 19323893
+
+85. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323892; Sample name: B27_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323892	ID: 19323892
+
+86. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323891; Sample name: B24_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323891	ID: 19323891
+
+87. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323890; Sample name: B24_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323890	ID: 19323890
+
+88. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323889; Sample name: B21_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323889	ID: 19323889
+
+89. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323888; Sample name: B21_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323888	ID: 19323888
+
+90. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323887; Sample name: B18_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323887	ID: 19323887
+
+91. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323886; Sample name: B18_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323886	ID: 19323886
+
+92. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323885; Sample name: B12_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323885	ID: 19323885
+
+93. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323884; Sample name: B12_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323884	ID: 19323884
+
+94. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323883; Sample name: B9_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323883	ID: 19323883
+
+95. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323882; Sample name: B9_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323882	ID: 19323882
+
+96. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323881; Sample name: B6_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323881	ID: 19323881
+
+97. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323880; Sample name: B6_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323880	ID: 19323880
+
+98. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323879; Sample name: B3_R2
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323879	ID: 19323879
+
+99. Metagenome or environmental sample from chicken gut metagenome
+Identifiers:	BioSample: SAMN19323878; Sample name: B3_R1
+Organism:	chicken gut metagenome
+Package:	Metagenome or environmental; version 1.0
+Accession: SAMN19323878	ID: 19323878
