@@ -53,9 +53,14 @@ Este estudio compara la microbiota cecal de pollos de engorde, ponedoras e inter
 | Data volume, Mbytes |	270 |
 
 
-_Links_:   
+_Links_:  
+Base de datos que proporciona información sobre la estructura de genomas ensamblados, nombres de ensamblajes y otros metadatos, informes estadísticos y enlaces a datos de secuencias genómicas, en este caso se puede encontrar la informacion señalada anteriormente para la especie _Gallus gallus_  
 https://www.ncbi.nlm.nih.gov/assembly/GCF_016699485.2  
+
+Base de datos de nucleótidos es una colección de secuencias de varias fuentes, que incluyen GenBank, RefSeq, TPA y PDB. Los datos de secuencias de genomas, genes y transcripciones proporcionan la base para la investigación de diferentes areas de interés. Se anexa el enlace para la informacion entregada en la sección Refseq del informe.   
 https://www.ncbi.nlm.nih.gov/nuccore/NM_001004390.2  
+
+Un registro de Bioproyecto proporciona a los usuarios un único lugar para encontrar enlaces a los diversos tipos de datos generados para un proyecto en particular. Se anexa el enlace para la informacion entregada en la sección SRA del informe.   
 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245  
 
 ## **INSTALACIÓN Y CONFIGURACIÓN DE SOFTWARE PARA ACCESO REMOTO Y TRANSFERENCIA DE ARCHIVOS**
