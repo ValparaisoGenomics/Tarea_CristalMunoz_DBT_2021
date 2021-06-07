@@ -107,9 +107,4 @@ Posteriormente ejecutar la instalacion en tu PC.
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20SRA.png)   
 
-## PRÁCTICA DE SHELL Y LINUX
-
-## PRÁCTICA DESCARGA DE SECUENCIAS NGS CON SRA TOOLKIT
-
-
 
