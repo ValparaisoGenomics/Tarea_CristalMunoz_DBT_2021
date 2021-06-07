@@ -66,23 +66,46 @@ https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245
 ## **INSTALACIÓN Y CONFIGURACIÓN DE SOFTWARE PARA ACCESO REMOTO Y TRANSFERENCIA DE ARCHIVOS**
 
 - **PuTTY**  
-![Screenshot](Capturaspantallaactividad9/pagina putty.png)
+Ingresar a putty.org y descargar PuTTY.   
 
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/pagina%20putty.png) 
 
+Posteriormente ejecutar la instalacion en tu PC.  
 
-- **WinSCP**
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/instalaci%C3%B3n%20putty%201.png)
 
-
+- **WinSCP**  
+ 
+ ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalaci%C3%B3n%20WinSCP.png) 
 
 ## **ACCESO REMOTO A SERVIDOR POMEO**
 
-- **SSH**
+- **SSH**      
 
-## **INSTALACIÓN Y CONFIGURACIÓN CONDA, NANO Y SRA TOOLKIT**
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Config%20pomeo.png)     
 
-- **Miniconda3**
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Config%20pomeo%20usuario.png)  
+
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Config%20pomeo%20password.png)  
+
+
+## **INSTALACIÓN Y CONFIGURACIÓN CONDA, NANO Y SRA TOOLKIT**  
+
+- **Miniconda3**  
+
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/pag%20miniconda.png)    
+
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalaci%C3%B3n%20miniconda.png)   
+
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalaci%C3%B3n%20miniconda%202.png)    
+
 - **nano**
+
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20nano.png)   
+
 - **SRA Toolkit**
+
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20SRA.png)   
 
 ## PRÁCTICA DE SHELL Y LINUX
 
