@@ -66,7 +66,7 @@ https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245
 ## **INSTALACIÓN Y CONFIGURACIÓN DE SOFTWARE PARA ACCESO REMOTO Y TRANSFERENCIA DE ARCHIVOS**
 
 - **PuTTY**  
-![Screenshot](pagina putty.png)
+![Screenshot](Capturaspantallaactividad9/pagina putty.png)
 
 
 
