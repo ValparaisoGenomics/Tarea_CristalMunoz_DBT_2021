@@ -284,3 +284,30 @@ rm -r tesis`
 | **ctrl-w -** | Borra la palabra inmediatamente detras del cursor |  
 | **exit** | Es un comando para cerrar la sesión |  
 
+### Introducción al análisis de secuencias NGS
+
+#### Conección a servidor Pomeo, configuración de bioconda e instalación de software  
+
+Ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conección remota en **POMEO**. Una vez iniciada tu sesión, **configurar bioconda e instalar el software** con los siguientes comandos:
+
+`conda config --add channels bioconda`  
+
+`conda install -c bioconda fastqc`  
+
+`conda install -c bioconda trimmomatic`  
+
+imagen  
+
+Usando el comando **mkdir** creas un directorio llamado **SRA_samples**  
+
+`mkdir SRA_samples`  
+
+Luego accedes a este directorio con el comando  
+
+`cd SRA_samples`  
+
+imagen 
+
+
+
+
