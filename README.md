@@ -231,16 +231,18 @@ Crea un directorio de trabajo denominado tesis
 
 `mkdir tesis`  
 
-Cambia al directorio tesis
+Cambia al directorio tesis  
+
 `cd tesis`
 
-cd .. es un comando para volver al directorio anterior, luego intenta regresar a tu cuenta de usuario.  
+**cd ..** es un comando para volver al directorio anterior, luego intenta regresar a tu cuenta de usuario.  
 
-`cd ..  
-cd nombre.usuario`
+`cd ..`     
+`cd nombre.usuario`
 
-Al usar el simbolo > que funciona como una tibería la información del espacio total del sistema se almacena en un documento de texto denominado espacio_libre_pomeo.txt
-df -hP > espacio_libre_pomeo.txt  
+Al usar el simbolo **>** que funciona como una tibería la información del espacio total del sistema se almacena en un documento de texto denominado **espacio_libre_pomeo.txt**
+
+`df -hP > espacio_libre_pomeo.txt`  
 
 La mayoría de los datos genómicos están almacenados en archivos de texto plano o formato de texto por lo que es conveniente aprender a leer los archivos usando diferentes comandos
 
