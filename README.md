@@ -178,4 +178,105 @@ Finalmente explore la muesta con **zcat** y chequee el número de read descargad
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20SRA.png)   
 
+### PRÁCTICA DE SHELL Y LINUX
+
+Comandos básicos para trabajar en proyectos de genómica. 
+
+Ejecutar los siguientes comandos en la terminal:
+
+**bash –version** indica información de la versión del software **bash**
+
+`bash --version`
+
+**pwd - present working directory-** es un comando que indica el nombre del directorio en el que se encuentra.  
+
+`pwd`
+
+Informa acerca del espacio total en el sistema, espacio usado, espacio disponible  
+
+`df -hP`
+
+_A continuación se muestra un ejemplo de reporte del comando **df -hP** y del comando **top**_
+
+_Filesystem Size Used Avail Use% Mounted on  
+overlay 125G 64G 61G 52% /  
+tmpfs 64M 0 64M 0% /dev  
+/dev/nvme0n1p1 125G 64G 61G 52% /opt/R  
+/dev/nbd12 2.7G 2.2G 368M 86% /home/rstudio-user  
+/dev/nbd14 2.7G 4.9M 2.6G 1% /cloud/project  
+shm 64M 0 64M 0% /dev/shm    
+/dev/nbd13 2.7G 4.5M 2.6G 1% /home/rstudio-user/.rstudio  
+/dev/nbd15 2.7G 51M 2.5G 2% /home/rstudio-user/R  
+tmpfs 16G 0 16G 0% /proc/scsi  
+tmpfs 16G 0 16G 0% /sys/firmware_  
+
+**Evalua el performance de la CPU, similar al monitor del sistema**
+
+`top`  
+(para salir presiona q)
+
+_PID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND  
+1 rstudio+ 20 0 419784 39508 13080 S 0.0 0.1 0:04.82 rserver  
+15 root 20 0 4464 768 644 S 0.0 0.0 0:00.09 tail  
+191 rstudio+ 20 0 120256 9744 8912 S 0.0 0.0 0:01.43 rserver-monitor  
+192 root 20 0 27296 5152 4372 S 0.0 0.0 0:00.00 rserver-http  
+429 rstudio+ 20 0 72232 3380 3044 S 0.0 0.0 0:00.00 rsession-run  
+475 rstudio+ 20 0 72216 3456 3132 S 0.0 0.0 0:00.00 bash  
+481 rstudio+ 20 0 956644 267308 52804 S 0.0 0.8 0:07.41 rsession  
+482 rstudio+ 20 0 58636 688 620 S 0.0 0.0 0:00.00 cat  
+520 rstudio+ 20 0 74464 3788 3248 S 0.0 0.0 0:00.03 bash  
+604 rstudio+ 20 0 94928 3688 3220 R 0.0 0.0 0:00.13 top_  
+
+Crea un directorio de trabajo denominado tesis  
+
+`mkdir tesis`  
+
+Cambia al directorio tesis
+`cd tesis`
+
+cd .. es un comando para volver al directorio anterior, luego intenta regresar a tu cuenta de usuario.  
+
+`cd ..  
+cd nombre.usuario`
+
+Al usar el simbolo > que funciona como una tibería la información del espacio total del sistema se almacena en un documento de texto denominado espacio_libre_pomeo.txt
+df -hP > espacio_libre_pomeo.txt  
+
+La mayoría de los datos genómicos están almacenados en archivos de texto plano o formato de texto por lo que es conveniente aprender a leer los archivos usando diferentes comandos
+
+**cat** lee datos de un archivo e imprime su contenido en la terminal.  
+
+`cat espacio_libre.txt`
+
+**less** lee datos de un archivo sin imprimir en la terminal. Podemos entonces recorrer el archivo.  
+
+`less espacio_libre.txt`
+
+**wc** cuenta líneas, palabras y caracteres de un fichero.  
+
+`wc espacio_libre.txt`
+
+**ls** es un comando de listado de objetos en un directorio (home 2 indica los usuarios) (en ~ indica los programas y ficheros que existen)
+`ls`  
+
+**ls -l -h** entrega información con mas detalle de los objetos y de un tamaño que sea legible por humanos.  
+
+`ls -l -h`
+
+**rm -r** es un comando para remover un fichero o directorio forzando la acción. Pruebe borrar el directorio llamado tesis
+`rm tesis
+rm -r tesis`  
+
+**Atajos del teclado para trabajar más eficientemente en la terminal**     
+| **ATAJOS** | **FUNCIÓN** |    
+|  :---  |  :---  |   
+| **flecha arriba/abajo** | Te permite moverte por las líneas ejecutadas en la terminal |  
+| **history** | Imprime todas las líneas de comando ejecutadas en la terminal |  
+| **tab** | Usa el tabulador como un atajo para llamar al fichero |  
+| **ctrl-a -** | Mueve el cursor al comienzo de la línea actual |  
+| **ctrl-e -**| Mueve el cursor al final de la línea actual |  
+| **ctrl-k -**| Borra desde el cursor hasta el final de la línea |  
+| **ctrl-u -** | Borra desde el cursor hasta el inicio de la línea |  
+| **ctrl-w -** | Borra la palabra inmediatamente detras del cursor |  
+| **exit** | Es un comando para cerrar la sesión |  
 
