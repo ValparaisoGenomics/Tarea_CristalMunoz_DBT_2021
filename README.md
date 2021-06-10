@@ -256,14 +256,16 @@ La mayoría de los datos genómicos están almacenados en archivos de texto plan
 
 `wc espacio_libre.txt`
 
-**ls** es un comando de listado de objetos en un directorio (home 2 indica los usuarios) (en ~ indica los programas y ficheros que existen)
+**ls** es un comando de listado de objetos en un directorio (home 2 indica los usuarios) (en ~ indica los programas y ficheros que existen)  
+
 `ls`  
 
 **ls -l -h** entrega información con mas detalle de los objetos y de un tamaño que sea legible por humanos.  
 
 `ls -l -h`
 
-**rm -r** es un comando para remover un fichero o directorio forzando la acción. Pruebe borrar el directorio llamado tesis
+**rm -r** es un comando para remover un fichero o directorio forzando la acción. Pruebe borrar el directorio llamado tesis  
+
 `rm tesis
 rm -r tesis`  
 
