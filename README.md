@@ -154,17 +154,17 @@ Moverse al directorio **/sratoolkit.2.10.5-centos_linux64** y configurar **SRAto
 
 `bin/vdb-config --interactive`
 
-Ejecute el siguiente comando para probar que SRAToolkit está trabajando correctamente.
+Ejecute el siguiente comando para probar que **SRAToolkit** está trabajando correctamente.
 
 `fastq-dump --stdout SRR390728 | head -n 8`
 
-Si todo va bien con esta muestra continue con los siguientes comandos, alternativamente agregue bin/ al inicio del comando.
+Si todo va bien con esta muestra continue con los siguientes comandos, alternativamente agregue **bin/** al inicio del comando.
 
-El primero descarga y muestra el contenido de las 5 primeras secuencias del archivo SRR6019464.
+El primero descarga y muestra el contenido: **5 primeras secuencias del archivo SRR6019464.**
 
 `fastq-dump -X 5 -Z SRR6019464`  
 
-El segundo descarga el contenido de las 5 primeras secuencias y las almacena en un archivo con formato fastq
+El segundo descarga el contenido de las 5 primeras secuencias y las almacena en un archivo con formato **fastq**
 
 `fastq-dump -X 5 SRR6019464`  
 
