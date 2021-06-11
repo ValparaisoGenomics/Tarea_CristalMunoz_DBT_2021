@@ -323,18 +323,18 @@ Créa un archivo ejecutable **(.sh)** con nano denominado **download.sh** utiliz
 
 Introduce y guarda la información del script como se detalla a continuación
 
-`#!/bin/bash
- #SBATCH -J prefetch_usuario
- /home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/usuario/SRA_samples/
- /home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/usuario/SRA_samples/SRR2006763/SRR2006763.sra`
+`#!/bin/bash  
+ #SBATCH -J prefetch_usuario  
+ /home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/usuario/SRA_samples/  
+ /home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/usuario/SRA_samples/SRR2006763/SRR2006763.sra`  
 
 Cambia en la segunda y tercera línea **usuario** por tu nombre de usuario.  
 _Ejemplo_  
 
-`#!/bin/bash
- #SBATCH -J prefetch_usuario
- /home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/cristal.munoz/SRA_samples/
- /home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/cristal.munoz/SRA_samples/SRR2006763/SRR2006763.sra`
+`#!/bin/bash  
+ #SBATCH -J prefetch_usuario  
+ /home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/cristal.munoz/SRA_samples/  
+ /home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/cristal.munoz/SRA_samples/SRR2006763/SRR2006763.sra`  
  
  Corre el script mediante el siguiente comando
  
