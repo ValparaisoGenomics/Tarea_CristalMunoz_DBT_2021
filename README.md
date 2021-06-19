@@ -7,11 +7,13 @@ _Cristal Muñoz Rojas_
 
 ## Tabla de Contenidos  
 - [_**Especie de importancia económica en producción animal**_   ](#Especie-de-importancia-económica-en-producción-animal)  
-  - [ Assembly](#Assembly)
-- [_**Intalación y configuración de Software para acceso remoto y transferencia de archivos_](#Intalación-y-configuración-de-Software-para-acceso-remoto-y-transferencia-de-archivos)    
-- [_**Práctica de Shell y Linux_](#Práctica-de-Shell-y-Linux)
-- [_**Introducción al análisis de secuencias NGS_](#Introducción-al-análisis-de-secuencias-NGS)  
-- [_**Introducción al análisis de secuencias NGS - Alineamiento_  ](#Introducción-al-análisis-de-secuencias-NGS---Alineamiento)  
+  - [ Assembly](#Assembly)  
+  - [Refseq](#Refseq)
+  - [SRA](SRA)
+- [_**Intalación y configuración de Software para acceso remoto y transferencia de archivos**_](#Intalación-y-configuración-de-Software-para-acceso-remoto-y-transferencia-de-archivos)    
+- [_**Práctica de Shell y Linux**_](#Práctica-de-Shell-y-Linux)
+- [_**Introducción al análisis de secuencias NGS**_](#Introducción-al-análisis-de-secuencias-NGS)  
+- [_**Introducción al análisis de secuencias NGS - Alineamiento**_  ](#Introducción-al-análisis-de-secuencias-NGS---Alineamiento)  
 
 
 
