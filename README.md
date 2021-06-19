@@ -10,7 +10,7 @@ _Cristal Muñoz Rojas_
 - [_Intalación y configuración de Software para acceso remoto y transferencia de archivos_](#Intalación-y-configuración-de-Software-para-acceso-remoto-y-transferencia-de-archivos)    
 - [_Práctica de Shell y Linux_](#Práctica-de-Shell-y-Linux)
 - [_Introducción al análisis de secuencias NGS_](#Introducción-al-análisis-de-secuencias-NGS)  
-- [_Introducción al análisis de secuencias NGS - Alineamiento_  ](#Introducción-al-análisis-de-secuencias-NGS:-Alineamiento)  
+- [_Introducción al análisis de secuencias NGS: Alineamiento_](#Introducción-al-análisis-de-secuencias-NGS:-Alineamiento)  
 
 
 ## _Especie de importancia económica en producción animal_   
