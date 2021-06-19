@@ -63,7 +63,7 @@ https://www.ncbi.nlm.nih.gov/nuccore/NM_001004390.2
 Un registro de Bioproyecto proporciona a los usuarios un único lugar para encontrar enlaces a los diversos tipos de datos generados para un proyecto en particular. Se anexa el enlace para la informacion entregada en la sección SRA del informe.   
 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245  
 
-## **INSTALACIÓN Y CONFIGURACIÓN DE SOFTWARE PARA ACCESO REMOTO Y TRANSFERENCIA DE ARCHIVOS**
+## **Intalación y configuración de Software para acceso remoto y transferencia de archivos**
 
 - **PuTTY**  
 Ingresar a www.putty.org y descargar PuTTY.   
@@ -80,7 +80,7 @@ Ingresar al siguiente link https://winscp.net/eng/download.php  y hacer click en
  
  ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalaci%C3%B3n%20WinSCP.png) 
 
-## **ACCESO REMOTO A SERVIDOR POMEO**
+### **Acceso remoto a servidor POMEO**
 
 - **SSH**      
 
@@ -93,7 +93,7 @@ Ingresar el Host Name **200.54.220.141**, seleccionar **POMEO** y hacer click en
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Config%20pomeo%20password.png)  
 
 
-## **INSTALACIÓN Y CONFIGURACIÓN CONDA, NANO Y SRA TOOLKIT**  
+### **Instalación y configuración CONDA, NANO Y SRA TOOLKIT**  
 
 - **Miniconda3**  
 
@@ -178,7 +178,7 @@ Finalmente explore la muesta con **zcat** y chequee el número de read descargad
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20SRA.png)   
 
-### PRÁCTICA DE SHELL Y LINUX
+## Práctica de Shell y Linux
 
 Comandos básicos para trabajar en proyectos de genómica. 
 
@@ -258,9 +258,9 @@ rm -r tesis`
 | **ctrl-w -** | Borra la palabra inmediatamente detras del cursor |  
 | **exit** | Es un comando para cerrar la sesión |  
 
-### Introducción al análisis de secuencias NGS
+## Introducción al análisis de secuencias NGS
 
-#### Conección a servidor Pomeo, configuración de bioconda e instalación de software  
+### Conección a servidor Pomeo, configuración de bioconda e instalación de software  
 
 Ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conección remota en **POMEO**. Una vez iniciada tu sesión, **configurar bioconda e instalar el software** con los siguientes comandos:
 
@@ -283,7 +283,7 @@ Luego accedes a este directorio con el comando
 ![img]()  
 ![img]()  
 
-#### Descarga de biomuestra desde SRA
+### Descarga de biomuestra desde SRA
 
 Trabajar con la biomuestra **SRR2006763** proveniente de la cepa Aquagen de _Salmo salar_. Se obtendrán los dos archivos **fastq**, los datos provienen de una secuenciación pair-end.
 
