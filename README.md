@@ -154,26 +154,21 @@ Moverse al directorio **/sratoolkit.2.10.5-centos_linux64** y configurar **SRAto
 
 `bin/vdb-config --interactive`
 
-Ejecute el siguiente comando para probar que **SRAToolkit** está trabajando correctamente.
-
+Ejecute el siguiente comando para probar que **SRAToolkit** está trabajando correctamente.  
 `fastq-dump --stdout SRR390728 | head -n 8`
 
 Si todo va bien con esta muestra continue con los siguientes comandos, alternativamente agregue **bin/** al inicio del comando.
 
-El primero descarga y muestra el contenido: **5 primeras secuencias del archivo SRR6019464.**
-
+El primero descarga y muestra el contenido: **5 primeras secuencias del archivo SRR6019464.**  
 `fastq-dump -X 5 -Z SRR6019464`  
 
-El segundo descarga el contenido de las 5 primeras secuencias y las almacena en un archivo con formato **fastq**
-
+El segundo descarga el contenido de las 5 primeras secuencias y las almacena en un archivo con formato **fastq**  
 `fastq-dump -X 5 SRR6019464`  
 
-El tercero descarga la biomuestra completa, detenga la ejecución luego de unos momentos, son 65 GB de datos.
-
+El tercero descarga la biomuestra completa, detenga la ejecución luego de unos momentos, son 65 GB de datos.  
 `fastq-dump --gzip --split-3 SRR6019464`  
 
-Finalmente explore la muesta con **zcat** y chequee el número de read descargados.
-
+Finalmente explore la muesta con **zcat** y chequee el número de read descargados.  
 `zcat SRR6019464.fastq.gz | echo $((`wc -l`/4))`
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20SRA.png)   
@@ -248,8 +243,7 @@ rm -r tesis`
 
 ### Conección a servidor Pomeo, configuración de bioconda e instalación de software  
 
-Ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conección remota en **POMEO**. Una vez iniciada tu sesión, **configurar bioconda e instalar el software** con los siguientes comandos:
-
+Ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conección remota en **POMEO**. Una vez iniciada tu sesión, **configurar bioconda e instalar el software** con los siguientes comandos:  
 `conda config --add channels bioconda`  
 
 `conda install -c bioconda fastqc`  
@@ -258,12 +252,10 @@ Ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e in
 
 ![img]()   
  
-Usando el comando **mkdir** creas un directorio llamado **SRA_samples**  
-
+Usando el comando **mkdir** creas un directorio llamado **SRA_samples**    
 `mkdir SRA_samples`  
 
-Luego accedes a este directorio con el comando  
-
+Luego accedes a este directorio con el comando:   
 `cd SRA_samples`  
 
 ![img]()  
@@ -277,11 +269,10 @@ Trabajar con la biomuestra **SRR2006763** proveniente de la cepa Aquagen de _Sal
 |  :---  |  :---  |   
 | Biomuestra 2 | SRR2006763_2.fastq |  
 
-Créa un archivo ejecutable **(.sh)** con nano denominado **download.sh** utilizando el siguiente comando:
-
+Créa un archivo ejecutable **(.sh)** con nano denominado **download.sh** utilizando el siguiente comando:  
 `nano download.sh`
 
-Introduce y guarda la información del script como se detalla a continuación
+Introduce y guarda la información del script como se detalla a continuación:
 
 `#!/bin/bash  
  #SBATCH -J prefetch_usuario  
@@ -296,12 +287,10 @@ _Ejemplo_
  /home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/cristal.munoz/SRA_samples/  
  /home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/cristal.munoz/SRA_samples/SRR2006763/SRR2006763.sra`  
  
- Corre el script mediante el siguiente comando
- 
+ Corre el script mediante el siguiente comando:  
  `bash download.sh`  
  
-Cuando finalice la ejecución, lista la carpeta **SRA_samples** para comprobar que se creó el directorio de la secuencia descargada con el nombre **SRR2006763**, corroborar que dentro de este directorio se generó el archivo **SRR2006763.sra**, utiliza el siguiente comando:
-
+Cuando finalice la ejecución, lista la carpeta **SRA_samples** para comprobar que se creó el directorio de la secuencia descargada con el nombre **SRR2006763**, corroborar que dentro de este directorio se generó el archivo **SRR2006763.sra**, utiliza el siguiente comando:  
 `ls -l -h `  
 
 ![img]()  
@@ -315,9 +304,8 @@ Luego debes acceder a la carpeta **SRR2006763** y crear el siguiente script (**n
  ![img]()  
  ![img]()  
  
- Finalmente, corre el script mediante el comando **bash fdump.sh**. Se extraerán los archivos **fastq** y se indicará el total de **read leidos y escritos**.
- 
- `bash fdump.sh`  
+ Finalmente, corre el script mediante el comando **bash fdump.sh**. Se extraerán los archivos **fastq** y se indicará el total de **read leidos y escritos**.  
+  `bash fdump.sh`  
  
  ![img]() 
  
@@ -325,19 +313,16 @@ Luego debes acceder a la carpeta **SRR2006763** y crear el siguiente script (**n
 
 **md5sum** es un algoritmo que se utiliza para evitar daños que pueden generarse durante el proceso de descarga de la biomuestra desde SRA.  
 
-Busca el código **Md5** de las muestras y direcciona la información a un archivo **md5_samples**, con el siguiente comando:  
-
+Busca el código **Md5** de las muestras y direcciona la información a un archivo **md5_samples**, con el siguiente comando:    
 `md5sum SRR2006763_1.fastq SRR2006763_2.fastq > md5_samples`    
  
- Verifica la salida generada con el comando; los valores de **md5** de las muestras se pueden observar en la imagen: 
- 
+ Verifica la salida generada con el comando; los valores de **md5** de las muestras se pueden observar en la imagen:   
  `cat md5_samples`  
  
  ![img]()  
  
- Comprueba la integridad de ambas biomuestras usando **md5sum** o similar. El resultado se puede observar en la imagen.
- 
- `md5sum -c md5_samples`  
+ Comprueba la integridad de ambas biomuestras usando **md5sum** o similar. El resultado se puede observar en la imagen.  
+  `md5sum -c md5_samples`  
  
  ![img]()  
  
@@ -373,9 +358,33 @@ Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **
 
 ## _Introducción al análisis de secuencias NGS - Alineamiento_  
 
+### Conectar a servidor Pomeo  
 
- 
- 
+Ingresa al servidor **POMEO** como se especifica en la sección ###Acceso remoto a servidor POMEO (hacer vínculo)   
+
+### Configurar bioconda e instalar programas para análisis  
+
+*Primero*: Configurar el canal **bioconda** ejecutando el siguiente comando:   
+`conda config --add channels bioconda` 
+
+*Segundo*: Instala los software **bwa**  
+`conda install -c bioconda bwa`
+
+*Tercero*: Instalar **samtools** ejecutanda cada uno de los comandos que se entregan a continuación:  
+`conda install -c bioconda samtools`  
+
+`conda config --add channels bioconda`  
+
+`conda config --add channels conda-forge`  
+
+`conda install samtools==1.11`  
+
+### Verificar directorios de instalación  
+
+
+
+
+
 
 
 
