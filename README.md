@@ -247,7 +247,7 @@ La mayoría de los datos genómicos están almacenados en archivos de texto plan
 
 ### Conección a servidor Pomeo, configuración de bioconda e instalación de software  
 
-Ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conección remota en **POMEO** (##**Acceso-remoto-a-servidor-POMEO**). Una vez iniciada tu sesión, **configurar bioconda e instalar el software** con los siguientes comandos:  
+Ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conección remota en [**POMEO**](##**Acceso-remoto-a-servidor-POMEO**). Una vez iniciada tu sesión, **configurar bioconda e instalar el software** con los siguientes comandos:  
 `conda config --add channels bioconda`  
 
 `conda install -c bioconda fastqc`  
