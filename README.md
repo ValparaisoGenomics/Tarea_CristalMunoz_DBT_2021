@@ -377,10 +377,10 @@ Luego, introduce y guarda la información del script como se detalla a continuac
 Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **POMEO**, como se señala a continuación: 
 
 - Ingresa al siguiente link http://200.54.220.141:8787/ (verifica que este conectado al puerto 8787).
-- Utiliza tus datos de usuario y clave de POMEO   
+- Utiliza tus datos de usuario y clave de **POMEO**   
 - Haz click en la carpeta **SRA_SAMPLES**
 - Haz click en la carpeta **SRR2006763** 
-- Listo! ya encontraste tus archivos HTML y ZIP  
+- Listo! ya encontraste tus archivos **HTML y ZIP**  
 
 ### Filtrado y poda  
 
