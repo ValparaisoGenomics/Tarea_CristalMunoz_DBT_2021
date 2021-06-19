@@ -1,4 +1,4 @@
-# _**Práctica elaboracion de un proyecto de genómica aplicada**_   
+# _Elaboracion de un proyecto de genómica aplicada_   
 
 ### _**Autor**_  
 _Cristal Muñoz Rojas_  
