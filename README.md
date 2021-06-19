@@ -184,64 +184,50 @@ Comandos básicos para trabajar en proyectos de genómica.
 
 Ejecutar los siguientes comandos en la terminal:
 
-**bash –version** indica información de la versión del software **bash**
-
+**bash –version** indica información de la versión del software **bash**  
 `bash --version`
 
-**pwd - present working directory-** es un comando que indica el nombre del directorio en el que se encuentra.  
-
+**pwd - present working directory-** es un comando que indica el nombre del directorio en el que se encuentra.    
 `pwd`
 
-Informa acerca del espacio total en el sistema, espacio usado, espacio disponible  
-
+Informa acerca del espacio total en el sistema, espacio usado, espacio disponible    
 `df -hP`
 
-**Evalua el performance de la CPU, similar al monitor del sistema**
-
+**Evalua el performance de la CPU, similar al monitor del sistema**  
 `top`  
 (para salir presiona q)  
 
-Crea un directorio de trabajo denominado tesis  
-
+Crea un directorio de trabajo denominado tesis    
 `mkdir tesis`  
 
-Cambia al directorio tesis  
-
+Cambia al directorio tesis    
 `cd tesis`
 
-**cd ..** es un comando para volver al directorio anterior, luego intenta regresar a tu cuenta de usuario.  
-
+**cd ..** es un comando para volver al directorio anterior, luego intenta regresar a tu cuenta de usuario.    
 `cd ..`     
 `cd nombre.usuario`
 
-Al usar el simbolo **>** que funciona como una tibería la información del espacio total del sistema se almacena en un documento de texto denominado **espacio_libre_pomeo.txt**
-
+Al usar el simbolo **>** que funciona como una tibería la información del espacio total del sistema se almacena en un documento de texto denominado **espacio_libre_pomeo.txt**   
 `df -hP > espacio_libre_pomeo.txt`  
 
 La mayoría de los datos genómicos están almacenados en archivos de texto plano o formato de texto por lo que es conveniente aprender a leer los archivos usando diferentes comandos
 
-**cat** lee datos de un archivo e imprime su contenido en la terminal.  
-
+**cat** lee datos de un archivo e imprime su contenido en la terminal.     
 `cat espacio_libre.txt`
 
-**less** lee datos de un archivo sin imprimir en la terminal. Podemos entonces recorrer el archivo.  
-
+**less** lee datos de un archivo sin imprimir en la terminal. Podemos entonces recorrer el archivo.    
 `less espacio_libre.txt`
 
-**wc** cuenta líneas, palabras y caracteres de un fichero.  
-
+**wc** cuenta líneas, palabras y caracteres de un fichero.    
 `wc espacio_libre.txt`
 
-**ls** es un comando de listado de objetos en un directorio (home 2 indica los usuarios) (en ~ indica los programas y ficheros que existen)  
-
+**ls** es un comando de listado de objetos en un directorio (home 2 indica los usuarios) (en ~ indica los programas y ficheros que existen)    
 `ls`  
 
-**ls -l -h** entrega información con mas detalle de los objetos y de un tamaño que sea legible por humanos.  
-
+**ls -l -h** entrega información con mas detalle de los objetos y de un tamaño que sea legible por humanos.    
 `ls -l -h`
 
-**rm -r** es un comando para remover un fichero o directorio forzando la acción. Pruebe borrar el directorio llamado tesis  
-
+**rm -r** es un comando para remover un fichero o directorio forzando la acción. Pruebe borrar el directorio llamado tesis    
 `rm tesis
 rm -r tesis`  
 
@@ -384,6 +370,8 @@ Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **
 
 ### Filtrado y poda  
 
+
+## _Introducción al análisis de secuencias NGS - Alineamiento_  
 
 
  
