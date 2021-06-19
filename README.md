@@ -346,6 +346,77 @@ Cuando finalice la ejecución, lista la carpeta **SRA_samples** para comprobar q
 
 ![img]()  
 
+Luego debes acceder a la carpeta **SRR2006763** y crear el siguiente script (**nano fdump.sh**) que permitirá obtener los archivos fastq de la muestra **SRR2006763**.  
+
+`#!/bin/bash
+ #SBATCH - J fdump_usuario
+ /home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/fasterq-dump /home2/usuario/SRA_samples/SRR2006763/*.sra -O /home2/usuario/SRA_samples/SRR2006763/`
+ 
+ ![img]()  
+ ![img]()  
+ 
+ Finalmente, corre el script mediante el comando **bash fdump.sh**. Se extraerán los archivos **fastq** y se indicará el total de **read leidos y escritos**.
+ 
+ `bash fdump.sh`  
+ 
+ ![img]() 
+ 
+### Comprobación de integridad de archivos  
+
+**md5sum** es un algoritmo que se utiliza para evitar daños que pueden generarse durante el proceso de descarga de la biomuestra desde SRA.  
+
+Busca el código **Md5** de las muestras y direcciona la información a un archivo **md5_samples**, con el siguiente comando:  
+
+`md5sum SRR2006763_1.fastq SRR2006763_2.fastq > md5_samples`    
+ 
+ Verifica la salida generada con el comando; los valores de **md5** de las muestras se pueden observar en la imagen: 
+ 
+ `cat md5_samples`  
+ 
+ ![img]()  
+ 
+ Comprueba la integridad de ambas biomuestras usando **md5sum** o similar. El resultado se puede observar en la imagen.
+ 
+ `md5sum -c md5_samples`  
+ 
+ ![img]()  
+ 
+ ### Análisis de control de calidad  
+ 
+Es recomendable realizar un análisis de control de calidad de secuencias **fastq** que provienen de **secuenciadores NGS**. Para esto, en el directorio **SRR2006763** debes crear y correr el siguiente script:
+ 
+`nano fastqc.sh`  
+
+Luego, introduce y guarda la información del script como se detalla a continuación:  
+
+`#!/bin/bash
+ #SBATCH - J fastqc_usuario
+ fastqc /home2/usuario/SRA_samples/SRR2006763/*.fastq`  
+ 
+ Recuerda que debes cambiar **_usuario_** por **tu_nombre_de_usuario**  
+ 
+ La salida resultante de la ejecución del script anterior serán dos archivos:
+
+- **archivo HTML**
+- **archivo .zip**  
+
+Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **POMEO**, como se señala a continuación: 
+
+- Ingresa al siguiente link http://200.54.220.141:8787/ (verifica que este conectado al puerto 8787).
+- Utiliza tus datos de usuario y clave de POMEO   
+- Haz click en la carpeta **SRA_SAMPLES**
+- Haz click en la carpeta **SRR2006763** 
+- Listo! ya encontraste tus archivos HTML y ZIP  
+
+### Filtrado y poda  
+
+
+
+ 
+ 
+
+
+
 
 
 
