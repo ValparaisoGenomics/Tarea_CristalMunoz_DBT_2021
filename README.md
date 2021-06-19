@@ -7,6 +7,7 @@ _Cristal Muñoz Rojas_
 
 ## Tabla de Contenidos  
 - [_Especie de importancia económica en producción animal_   ](#Especie-de-importancia-económica-en-producción-animal)  
+-[ Assembly](##Assembly)
 - [_Intalación y configuración de Software para acceso remoto y transferencia de archivos_](#Intalación-y-configuración-de-Software-para-acceso-remoto-y-transferencia-de-archivos)    
 - [_Práctica de Shell y Linux_](#Práctica-de-Shell-y-Linux)
 - [_Introducción al análisis de secuencias NGS_](#Introducción-al-análisis-de-secuencias-NGS)  
