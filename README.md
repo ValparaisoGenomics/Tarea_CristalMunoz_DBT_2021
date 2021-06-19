@@ -128,9 +128,11 @@ Ejecute entonces el siguiente código para llamar a nano en la terminal y escrib
 
 `**nano script1.sh**`  
 
-`# !/bin/bash`  
-`# Mi primer script`  
-`echo Curso de Genómica`  
+```
+# !/bin/bash    
+# Mi primer script    
+echo Curso de Genómica  
+```
 
 Ejecute el script desde la terminal usando,    
 
@@ -145,10 +147,12 @@ Usar los comandos **wget** y **tar** para descargar y descomprimir **_SRA Toolki
 
 `nano script1.sh`  
 
-`# !/bin/bash`  
-`# Descarga y descomprime SRA Toolkit`  
-`wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-centos_linux64.tar.gz
-tar -xzf sratoolkit.current-centos_linux64.tar.gz`  
+```
+# !/bin/bash    
+# Descarga y descomprime SRA Toolkit  
+wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-centos_linux64.tar.gz  
+tar -xzf sratoolkit.current-centos_linux64.tar.gz   
+```
 
 Moverse al directorio **/sratoolkit.2.10.5-centos_linux64** y configurar **SRAtoolkit** para trabajar en la nube.
 
@@ -223,8 +227,8 @@ La mayoría de los datos genómicos están almacenados en archivos de texto plan
 `ls -l -h`
 
 **rm -r** es un comando para remover un fichero o directorio forzando la acción. Pruebe borrar el directorio llamado tesis    
-`rm tesis
-rm -r tesis`  
+`rm tesis`
+`rm -r tesis`  
 
 **Atajos del teclado para trabajar más eficientemente en la terminal**     
 | **ATAJOS** | **FUNCIÓN** |    
@@ -273,23 +277,25 @@ Créa un archivo ejecutable **(.sh)** con nano denominado **download.sh** utiliz
 `nano download.sh`
 
 Introduce y guarda la información del script como se detalla a continuación:
-
-`#!/bin/bash`      
-`#SBATCH -J prefetch_usuario`      
-`/home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/usuario/SRA_samples/`         
-`/home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/usuario/SRA_samples/SRR2006763/SRR2006763.sra`       
+```
+#!/bin/bash        
+#SBATCH -J prefetch_usuario        
+/home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/usuario/SRA_samples/           
+/home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/usuario/SRA_samples/SRR2006763/SRR2006763.sra  
+```
 
 Cambia en la segunda, tercera y cuarta línea de **usuario** por **tu_nombre_de_usuario**.  
-_Ejemplo_  
-
-`#!/bin/bash`  
-`#SBATCH -J prefetch_cristal.munoz`      
-`/home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/cristal.munoz/SRA_samples/`      
-`/home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/cristal.munoz/SRA_samples/SRR2006763/SRR2006763.sra`    
- **Observación: Mantener las cuatro lineas al ingresar el script en nano **
+_Ejemplo_    
+```
+#!/bin/bash   
+#SBATCH -J prefetch_cristal.munoz        
+/home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/cristal.munoz/SRA_samples/        
+/home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/cristal.munoz/SRA_samples/SRR2006763/SRR2006763.sra      
+```
+**Observación: Mantener las cuatro lineas al ingresar el script en nano**
  
- Corre el script mediante el siguiente comando:  
- `bash download.sh`  
+Corre el script mediante el siguiente comando:  
+`bash download.sh`  
  
 Cuando finalice la ejecución, lista la carpeta **SRA_samples** para comprobar que se creó el directorio de la secuencia descargada con el nombre **SRR2006763**, corroborar que dentro de este directorio se generó el archivo **SRR2006763.sra**, utiliza el siguiente comando:  
 `ls -l -h `  
@@ -297,11 +303,13 @@ Cuando finalice la ejecución, lista la carpeta **SRA_samples** para comprobar q
 ![img]()  
 
 Luego debes acceder a la carpeta **SRR2006763** y crear el siguiente script (**nano fdump.sh**) que permitirá obtener los archivos fastq de la muestra **SRR2006763**.  
+```
+#!/bin/bash      
+#SBATCH - J fdump_usuario      
+/home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/fasterq-dump /home2/usuario/SRA_samples/SRR2006763/*.sra -O /home2/usuario/SRA_samples/SRR2006763/   
+```
+Recuerda que debes cambiar **_usuario_** por **tu_nombre_de_usuario**    
 
-`#!/bin/bash`    
-`#SBATCH - J fdump_usuario`     
-`/home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/fasterq-dump /home2/usuario/SRA_samples/SRR2006763/*.sra -O /home2/usuario/SRA_samples/SRR2006763/`     
- 
  ![img]()  
  ![img]()  
  
@@ -317,13 +325,13 @@ Luego debes acceder a la carpeta **SRR2006763** y crear el siguiente script (**n
 Busca el código **Md5** de las muestras y direcciona la información a un archivo **md5_samples**, con el siguiente comando:    
 `md5sum SRR2006763_1.fastq SRR2006763_2.fastq > md5_samples`    
  
- Verifica la salida generada con el comando; los valores de **md5** de las muestras se pueden observar en la imagen:   
- `cat md5_samples`  
+Verifica la salida generada con el comando; los valores de **md5** de las muestras se pueden observar en la imagen:   
+`cat md5_samples`  
  
  ![img]()  
  
- Comprueba la integridad de ambas biomuestras usando **md5sum** o similar. El resultado se puede observar en la imagen.  
-  `md5sum -c md5_samples`  
+Comprueba la integridad de ambas biomuestras usando **md5sum** o similar. El resultado se puede observar en la imagen.  
+`md5sum -c md5_samples`  
  
  ![img]()  
  
@@ -333,17 +341,17 @@ Es recomendable realizar un análisis de control de calidad de secuencias **fast
  `nano fastqc.sh`  
 
 Luego, introduce y guarda la información del script como se detalla a continuación:  
-
-`#!/bin/bash
- #SBATCH - J fastqc_usuario
- fastqc /home2/usuario/SRA_samples/SRR2006763/*.fastq`  
+```
+#!/bin/bash  
+#SBATCH - J fastqc_usuario  
+fastqc /home2/usuario/SRA_samples/SRR2006763/*.fastq    
+```
+Recuerda que debes cambiar **_usuario_** por **tu_nombre_de_usuario**  
  
- Recuerda que debes cambiar **_usuario_** por **tu_nombre_de_usuario**  
- 
- La salida resultante de la ejecución del script anterior serán dos archivos:
+La salida resultante de la ejecución del script anterior serán dos archivos:
 
-- **archivo HTML**
-- **archivo .zip**  
+- **Archivo HTML**
+- **Archivo .zip**  
 
 Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **POMEO**, como se señala a continuación: 
 
@@ -465,15 +473,17 @@ Se pueden ejecutar todas la etapas mensionadas anteriormente, creando un **scrip
 `nano aln_mt.sh`
 
 En el script ingresar las siguientes instrucciones:  
-`#!/bin/bash -l`  
-`# para alinear tus dos secuencias fastq al genoma mitocondrial`  
-`bwa mem mt.fasta SRR2006763_1.fastq SRR2006763_2.fastq > SRR2006763.sam`   
-`# Transformar tu archivo sam a bam`  
-`samtools view -Sb -q 30 SRR2006763.sam > SRR2006763.bam`    
-`# ordenar tu archivo binario bam`   
-`samtools sort SRR2006763.bam -o SRR2006763.sort.bam`     
-`# indexar tu archivo bam`   
-`samtools index SRR2006763.sort.bam `     
+```
+#!/bin/bash -l  
+# para alinear tus dos secuencias fastq al genoma mitocondrial    
+bwa mem mt.fasta SRR2006763_1.fastq SRR2006763_2.fastq > SRR2006763.sam     
+# Transformar tu archivo sam a bam    
+samtools view -Sb -q 30 SRR2006763.sam > SRR2006763.bam      
+# ordenar tu archivo binario bam     
+samtools sort SRR2006763.bam -o SRR2006763.sort.bam       
+# indexar tu archivo bam     
+samtools index SRR2006763.sort.bam  
+```
 
 ![img]()  
 
