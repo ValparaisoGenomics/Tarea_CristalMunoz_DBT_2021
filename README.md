@@ -483,7 +483,10 @@ Ejecuta tu script con bash
 ![img]() 
 
 Ahora que ya tienes tus archivos **SAM/BAM** puedes observar tu archivo sam con el comando **less** de linux   
-`less SRR2006763.sam`  
+`less SRR2006763.sam` 
+
+![img]() 
+![img]() 
 
 También puedes realizar un análisis estadístico estandar con los siguientes comandos:  
 `samtools flagstat SRR2006763.bam > muestra_stat.txt`  
