@@ -274,18 +274,19 @@ Créa un archivo ejecutable **(.sh)** con nano denominado **download.sh** utiliz
 
 Introduce y guarda la información del script como se detalla a continuación:
 
-`#!/bin/bash  
- #SBATCH -J prefetch_usuario  
- /home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/usuario/SRA_samples/  
- /home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/usuario/SRA_samples/SRR2006763/SRR2006763.sra`  
+`#!/bin/bash`      
+`#SBATCH -J prefetch_usuario`      
+`/home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/usuario/SRA_samples/`         
+`/home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/usuario/SRA_samples/SRR2006763/SRR2006763.sra`       
 
-Cambia en la segunda y tercera línea **usuario** por tu nombre de usuario.  
+Cambia en la segunda, tercera y cuarta línea de **usuario** por **tu_nombre_de_usuario**.  
 _Ejemplo_  
 
-`#!/bin/bash  
- #SBATCH -J prefetch_usuario  
- /home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/cristal.munoz/SRA_samples/  
- /home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/cristal.munoz/SRA_samples/SRR2006763/SRR2006763.sra`  
+`#!/bin/bash`  
+`#SBATCH -J prefetch_cristal.munoz`      
+`/home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/cristal.munoz/SRA_samples/`      
+`/home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/cristal.munoz/SRA_samples/SRR2006763/SRR2006763.sra`    
+ **Observación: Mantener las cuatro lineas al ingresar el script en nano **
  
  Corre el script mediante el siguiente comando:  
  `bash download.sh`  
@@ -297,15 +298,15 @@ Cuando finalice la ejecución, lista la carpeta **SRA_samples** para comprobar q
 
 Luego debes acceder a la carpeta **SRR2006763** y crear el siguiente script (**nano fdump.sh**) que permitirá obtener los archivos fastq de la muestra **SRR2006763**.  
 
-`#!/bin/bash
- #SBATCH - J fdump_usuario
- /home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/fasterq-dump /home2/usuario/SRA_samples/SRR2006763/*.sra -O /home2/usuario/SRA_samples/SRR2006763/`
+`#!/bin/bash`    
+`#SBATCH - J fdump_usuario`     
+`/home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/fasterq-dump /home2/usuario/SRA_samples/SRR2006763/*.sra -O /home2/usuario/SRA_samples/SRR2006763/`     
  
  ![img]()  
  ![img]()  
  
  Finalmente, corre el script mediante el comando **bash fdump.sh**. Se extraerán los archivos **fastq** y se indicará el total de **read leidos y escritos**.  
-  `bash fdump.sh`  
+ `bash fdump.sh`  
  
  ![img]() 
  
@@ -328,9 +329,8 @@ Busca el código **Md5** de las muestras y direcciona la información a un archi
  
  ### Análisis de control de calidad  
  
-Es recomendable realizar un análisis de control de calidad de secuencias **fastq** que provienen de **secuenciadores NGS**. Para esto, en el directorio **SRR2006763** debes crear y correr el siguiente script:
- 
-`nano fastqc.sh`  
+Es recomendable realizar un análisis de control de calidad de secuencias **fastq** que provienen de **secuenciadores NGS**. Para esto, en el directorio **SRR2006763** debes crear y correr el siguiente script:    
+ `nano fastqc.sh`  
 
 Luego, introduce y guarda la información del script como se detalla a continuación:  
 
@@ -360,15 +360,21 @@ Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **
 
 ### Conectar a servidor Pomeo  
 
-Ingresa al servidor **POMEO** como se especifica en la sección ###Acceso remoto a servidor POMEO (hacer vínculo)   
+Ingresa al servidor **POMEO** como se especifica en la sección **Acceso remoto a servidor POMEO**    
+
+![img]() 
 
 ### Configurar bioconda e instalar programas para análisis  
 
 *Primero*: Configurar el canal **bioconda** ejecutando el siguiente comando:   
-`conda config --add channels bioconda` 
+`conda config --add channels bioconda`   
+
+![img]() 
 
 *Segundo*: Instala los software **bwa**  
-`conda install -c bioconda bwa`
+`conda install -c bioconda bwa`  
+
+![img]() 
 
 *Tercero*: Instalar **samtools** ejecutanda cada uno de los comandos que se entregan a continuación:  
 `conda install -c bioconda samtools`  
@@ -379,7 +385,117 @@ Ingresa al servidor **POMEO** como se especifica en la sección ###Acceso remoto
 
 `conda install samtools==1.11`  
 
+![img]()   
+
 ### Verificar directorios de instalación  
+
+Si deseas, puedes revisar la ruta de instalación de un programa determinado, para esto se utiliza el comando **“whereis”** en la terminal, junto a el programa del cual quieres obtener la ruta.  
+*Ejemplo*    
+`whereis sratoolkit`  
+
+`whereis samtools`  
+
+`whereis bwa`  
+
+![img]()   
+
+La salida de cada comando te indicará la ruta de instalación.    
+`/home2/usuario/miniconda3/bin/bwa`  
+
+![img]()  
+
+### Creación de directorio de trabajo y descarga de datos para alineamiento  
+
+Primero consideraremos que las secuencias fastq originales obtenidas tiene muy buena calidad, por lo tanto trabajaremos directamente en ellas. Para llevar a cabo este trabajo, debemos trasladar los archivos a una nueva carpeta que denominaremos **"alineamiento"** y que sera creada en tu usuario de **home2** segun el siguiente comando:  
+`mkdir alineamiento`  
+
+Una vez creada la carpeta **alineamiento** debemos ingresar a ella y transferir los archivos de clase anterior, haciendo uso de los siguientes comandos en la terminal:  
+`mv /home2/usuario/SRA_samples/SRR2006763/SRR2006763_1.fastq /home2/usuario/alineamiento/`  
+
+`mv /home2/usuario/SRA_samples/SRR2006763/SRR2006763_2.fastq /home2/usuario/alineamiento/`  
+
+Lista tu carpeta de alineamiento para verificar que tienes lo necesario para el alineamiento, hasta ahora deben estar tus dos secuencias **“SRR2006763_1.fastq”** y **“SRR2006763_2.fastq”**  
+`ls`
+
+Para continuar con la descarga de datos, haremos uso de el genoma de referencia de la **mitocondria de _Salmo salar_**. Realizaremos la descarga en la misma carpeta de **alineamiento**, para esto debes ingresar al siguiente link en tu navegador:   
+https://www.ncbi.nlm.nih.gov/genome/?term=salmo+salar; en este link encontraras el genoma de la mitocondria de _Salmo salar_, en una tabla que lista el genoma de referencia de esta especie donde se incluyen todos los cromosomas y el genoma de la mitocondria, buscarás "Name: **MT**" y haz clic en "RefSeq: **NC_001960.1**", puedes guiarte con las imagenes que estan a continuación:
+
+
+![img]()    
+![img]()  
+
+Una vez que ingresaste al genoma, debes dar clic en la opción **FASTA** localizada bajo el título e identificador RefSeq de la referencia y enviar la secuencia FASTA del genoma mitocondrial a un archivo, como se observa en la imagen.
+
+![img]()  
+
+Dirigete a la carpeta descargas de tu PC, encontrarás un archivo denominado **“sequence.fasta”**, cambia el nombre del archivo por **“mt.fasta”** y súbelo a **POMEO**.  
+Para llevar a cabo esta tarea, puedes utilizar **WINSCP**, para hacer uso de este software se debe realizar primero la tarea **"Intalación y configuración de Software para acceso remoto y transferencia de archivos"** o hacer la descarga e instalacion con el siguiente link:  https://winscp.net/eng/download.php
+ 
+Una instalado **WINSCP** debes iniciar sesión, con tus datos de usuario y clave de **POMEO**, guarda tus datos y conectarte como se indica en la siguiente imagen:
+
+![img]()  
+![img]()  
+![img]()  
+
+Finalmente, encontrarás la interfaz de tu servidor con las carpetas que tienes creadas, aquí ingresarás en tu carpeta de alineamiento y arrastrarás el archivo descagado del genoma mitocondrial a la misma.
+
+Cuando termines lo anterior puedes ingresar a **POMEO**, listar tu carpeta de alineamiento con **ls** y verás tu archivo **“mt.fasta”** junto con tus secuencias fastq.  
+
+### Indexación del genoma de referencia  
+
+Ya incluiste a tu carpeta de **alineamiento** todos los archivos descritos en pasos anteriores, por lo tanto, podemos comenzar con la primera etapa del alineamiento, que corresponde a la indexación del genoma de referencia con **bwa** usando el siguiente comando:  
+`bwa index mt.fasta`  
+
+La salida del comando dará como resultado **5 archivos** con extensiones **“amb”,“ann”,“bwt”,“pac” y “sa”**  
+
+![img]()
+
+### Alineamiento  
+
+Para llevar a cabo el alineamiento se deben contemplar las siguientes etapas:
+
+- Alineamiento de las secuencias contra el genoma de referencia, cuya salida será un archivo con extensión “.sam”  
+- Conversión del archivo SAM a BAM  
+- Inspeccionar el archivo .sam de salida  
+- Ordenar lecturas alineadas por posición  
+- Indexación con Samtools  
+- Exploración de datos con Samtools  
+
+Se pueden ejecutar todas la etapas mensionadas anteriormente, creando un **script** con **nano** denominado **aln_mt.sh**, como se muestra a continuación:  
+`nano aln_mt.sh`
+
+En el script ingresar las siguientes instrucciones:  
+`#!/bin/bash -l`  
+`# para alinear tus dos secuencias fastq al genoma mitocondrial`  
+`bwa mem mt.fasta SRR2006763_1.fastq SRR2006763_2.fastq > SRR2006763.sam`   
+`# Transformar tu archivo sam a bam`  
+`samtools view -Sb -q 30 SRR2006763.sam > SRR2006763.bam`    
+`# ordenar tu archivo binario bam`   
+`samtools sort SRR2006763.bam -o SRR2006763.sort.bam`     
+`# indexar tu archivo bam`   
+`samtools index SRR2006763.sort.bam `     
+
+![img]()  
+
+Ejecuta tu script con bash  
+`bash aln_mt.sh`  
+
+![img]() 
+
+Ahora que ya tienes tus archivos **SAM/BAM** puedes observar tu archivo sam con el comando **less** de linux   
+`less SRR2006763.sam`  
+
+También puedes realizar un análisis estadístico estandar con los siguientes comandos:  
+`samtools flagstat SRR2006763.bam > muestra_stat.txt`  
+
+
+
+
+
+
+
+
+
 
 
 
