@@ -1,4 +1,4 @@
-# _Elaboracion de un proyecto de genómica aplicada_   
+# _Elaboración de un proyecto de genómica aplicada_   
 
 ### _**Autor**_  
 _Cristal Muñoz Rojas_  
@@ -10,7 +10,12 @@ _Cristal Muñoz Rojas_
   - [ Assembly](#Assembly)  
   - [Refseq](#Refseq)
   - [SRA](SRA)
-- [_**Intalación y configuración de Software para acceso remoto y transferencia de archivos**_](#Intalación-y-configuración-de-Software-para-acceso-remoto-y-transferencia-de-archivos)    
+- [_**Intalación y configuración de Software para acceso remoto y transferencia de archivos**_](#Intalación-y-configuración-de-Software-para-acceso-remoto-y-transferencia-de-archivos)   
+  - [PuTTY](#PuTTY) 
+  - [WinSCP](#WinSCP)  
+  - [POMEO](#Acceso-remoto-a-servidor-POMEO)
+  - [Miniconda3](#Miniconda3)
+  -   
 - [_**Práctica de Shell y Linux**_](#Práctica-de-Shell-y-Linux)
 - [_**Introducción al análisis de secuencias NGS**_](#Introducción-al-análisis-de-secuencias-NGS)  
 - [_**Introducción al análisis de secuencias NGS - Alineamiento**_  ](#Introducción-al-análisis-de-secuencias-NGS---Alineamiento)  
@@ -77,7 +82,7 @@ https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245
 
 ## _Intalación y configuración de Software para acceso remoto y transferencia de archivos_
 
-- **PuTTY**  
+### PuTTY  
 Ingresar a www.putty.org y descargar PuTTY.   
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/pagina%20putty.png) 
@@ -86,13 +91,13 @@ Posteriormente ejecuta la instalacion en tu PC.
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/instalaci%C3%B3n%20putty%201.png)
 
-- **WinSCP**  
+### WinSCP  
 
 Ingresar al siguiente link https://winscp.net/eng/download.php  y hacer click en **DOWNLOAD WINSCP 5.17.10 (10.6 MB)** y luego ejecutar la instalación en tu PC.
  
  ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalaci%C3%B3n%20WinSCP.png) 
 
-### **Acceso remoto a servidor POMEO**
+### Acceso remoto a servidor POMEO
 
 - **SSH**      
 
@@ -107,7 +112,7 @@ Ingresar el Host Name **200.54.220.141**, seleccionar **POMEO** y hacer click en
 
 ### **Instalación y configuración CONDA, NANO Y SRA TOOLKIT**  
 
-- **Miniconda3**  
+### Miniconda3  
 
 **_Esta instalacion se debe realizar en PuTTY_**     
 
