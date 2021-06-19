@@ -5,7 +5,7 @@ _Cristal Muñoz Rojas_
 - Chilena 
 - Ingeniero en Biotecnología  
 
-## _**Descripción**_   
+## _Especie de importancia económica en producción animal_   
 
 ### Assembly
 
@@ -63,7 +63,7 @@ https://www.ncbi.nlm.nih.gov/nuccore/NM_001004390.2
 Un registro de Bioproyecto proporciona a los usuarios un único lugar para encontrar enlaces a los diversos tipos de datos generados para un proyecto en particular. Se anexa el enlace para la informacion entregada en la sección SRA del informe.   
 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245  
 
-## **Intalación y configuración de Software para acceso remoto y transferencia de archivos**
+## _Intalación y configuración de Software para acceso remoto y transferencia de archivos_
 
 - **PuTTY**  
 Ingresar a www.putty.org y descargar PuTTY.   
@@ -178,7 +178,7 @@ Finalmente explore la muesta con **zcat** y chequee el número de read descargad
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20SRA.png)   
 
-## Práctica de Shell y Linux
+## _Práctica de Shell y Linux_
 
 Comandos básicos para trabajar en proyectos de genómica. 
 
@@ -258,7 +258,7 @@ rm -r tesis`
 | **ctrl-w -** | Borra la palabra inmediatamente detras del cursor |  
 | **exit** | Es un comando para cerrar la sesión |  
 
-## Introducción al análisis de secuencias NGS
+## _Introducción al análisis de secuencias NGS_
 
 ### Conección a servidor Pomeo, configuración de bioconda e instalación de software  
 
