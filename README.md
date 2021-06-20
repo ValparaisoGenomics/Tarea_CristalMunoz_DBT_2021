@@ -102,7 +102,7 @@ WinSCP es una aplicación de Software Libre, es un cliente SFTP gráfico para Wi
 Para relizar la descarga e instalación sigue los siguientes pasos: 
 
 1.- Ingresa al siguiente link https://winscp.net/eng/download.php  
-2.- Haz click en **DOWNLOAD WINSCP 5.17.10 (10.6 MB)** 
+2.- Haz click en **DOWNLOAD WINSCP 5.17.10 (10.6 MB)**    
 3.- Ejecuta la instalación en tu PC.
  
  ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalaci%C3%B3n%20WinSCP.png) 
@@ -110,10 +110,10 @@ Para relizar la descarga e instalación sigue los siguientes pasos:
 ### Acceso remoto a servidor POMEO       
 - **SSH**  
 
-1.- Ingresa el Host Name **200.54.220.141**
-2.- Selecciona **POMEO** 
-3.- Haz click en **DATA** 
-4.- Ingresa ususario y clave
+1.- Ingresa el Host Name **200.54.220.141**   
+2.- Selecciona **POMEO**    
+3.- Haz click en **DATA**    
+4.- Ingresa ususario y clave   
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Config%20pomeo.png)     
 
