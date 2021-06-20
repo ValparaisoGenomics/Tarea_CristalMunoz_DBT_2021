@@ -18,6 +18,8 @@ _Cristal Muñoz Rojas_
   - [nano](#nano)  
   - [SRA Toolkit](#SRA-Toolkit)  
 - [_**Práctica de Shell y Linux**_](#Práctica-de-Shell-y-Linux)
+  - [Comandos básicos](#Comandos-básicos-para-trabajar-en-proyectos-de-genómica)
+  - [Atajos de teclado](#Atajos-del-teclado-para-trabajar-eficientemente-en-la-terminal)
 - [_**Introducción al análisis de secuencias NGS**_](#Introducción-al-análisis-de-secuencias-NGS)  
 - [_**Introducción al análisis de secuencias NGS - Alineamiento**_  ](#Introducción-al-análisis-de-secuencias-NGS---Alineamiento)  
 
@@ -193,7 +195,7 @@ Finalmente explore la muesta con **zcat** y chequee el número de read descargad
 
 ## _Práctica de Shell y Linux_
 
-Comandos básicos para trabajar en proyectos de genómica. 
+### Comandos básicos para trabajar en proyectos de genómica
 
 Ejecutar los siguientes comandos en la terminal:
 
@@ -244,7 +246,7 @@ La mayoría de los datos genómicos están almacenados en archivos de texto plan
 `rm tesis`
 `rm -r tesis`  
 
-**Atajos del teclado para trabajar más eficientemente en la terminal**     
+### Atajos del teclado para trabajar eficientemente en la terminal    
 | **ATAJOS** | **FUNCIÓN** |    
 |  :---  |  :---  |   
 | **flecha arriba/abajo** | Te permite moverte por las líneas ejecutadas en la terminal |  
