@@ -85,24 +85,35 @@ https://www.ncbi.nlm.nih.gov/bioproject/PRJNA732245
 
 ## _Intalación y configuración de Software para acceso remoto y transferencia de archivos_
 
-### PuTTY  
-Ingresar a www.putty.org y descargar PuTTY.   
+### PuTTY 
+PuTTY es un emulador de terminal gratuito que permite conectarnos y ejecutar comandos en un servidor remoto. Este emulador admite varios protocolos de red tal como SSH, Telnet, rlogin, y SCP. La mayoría de usuarios, especialmente los que trabajan sobre sistemas operativos Windows, lo encuentran muy útil a la hora de conectar a un servidor Unix o Linux a través de SSH.  
+Para relizar la descarga e instalación en tu sisema operativo Windows, sigue los siguientes pasos:   
+
+1.- Ingresa a www.putty.org y descarga PuTTY.   
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/pagina%20putty.png) 
 
-Posteriormente ejecuta la instalacion en tu PC.  
+2.- Ejecuta la instalacion en tu PC.  
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/instalaci%C3%B3n%20putty%201.png)
 
-### WinSCP  
+### WinSCP   
+WinSCP es una aplicación de Software Libre, es un cliente SFTP gráfico para Windows que emplea SSH. Su función principal es facilitar la transferencia segura de archivos entre dos sistemas informáticos, el local y uno remoto que ofrezca servicios SSH.  
+Para relizar la descarga e instalación sigue los siguientes pasos: 
 
-Ingresar al siguiente link https://winscp.net/eng/download.php  y hacer click en **DOWNLOAD WINSCP 5.17.10 (10.6 MB)** y luego ejecutar la instalación en tu PC.
+1.- Ingresa al siguiente link https://winscp.net/eng/download.php  
+2.- Haz click en **DOWNLOAD WINSCP 5.17.10 (10.6 MB)** 
+3.- Ejecuta la instalación en tu PC.
  
  ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalaci%C3%B3n%20WinSCP.png) 
 
 ### Acceso remoto a servidor POMEO       
+- **SSH**  
 
-Ingresar el Host Name **200.54.220.141**, seleccionar **POMEO** y hacer click en **DATA** Ingresar ususario y clave como se muesta en las imagenes: 
+1.- Ingresa el Host Name **200.54.220.141**
+2.- Selecciona **POMEO** 
+3.- Haz click en **DATA** 
+4.- Ingresa ususario y clave
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Config%20pomeo.png)     
 
@@ -112,6 +123,7 @@ Ingresar el Host Name **200.54.220.141**, seleccionar **POMEO** y hacer click en
  
 
 ### Miniconda3  
+Miniconda es una herramienta que ayuda a ordenar de manera fácil los paquetes o librerías de cada proyecto en el que trabajas, esta herramienta trabaja con el gestor de paquetes Conda que está escrito en lenguaje de programación Python, sin embargo Conda permite gestionar proyectos que contengan código escrito en otros lenguajes, como R y multilenguaje.
 
 **_Esta instalacion se debe realizar en PuTTY_**     
 
@@ -137,10 +149,11 @@ bash Miniconda3-latest-Linux-x86_64.sh`
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalaci%C3%B3n%20miniconda%202.png)    
 
 ### nano  
+nano es un editor de texto, presente por defecto en la mayoría de los sistemas basados en Linux.  
 
-Usando nano se creará un script denominado **script1.sh**. En este script ejecutaremos una simple impresión de la frase **_“Curso de Genomica”_** usando la función **echo**. La primera linea del script debe contener la siguiente instrucción **#!/bin/sh** a veces denominada **shebang**. Esta instrucción indica que se debe ejecutar, desde el directorio bin, el script actual usando la Shell.    
+Usando nano se creará un script denominado **script1.sh**. En este script ejecutarás una simple impresión de la frase **_“Curso de Genomica”_** usando la función **echo**. La primera linea del script debe contener la siguiente instrucción **#!/bin/sh** a veces denominada **shebang**. Esta instrucción indica que se debe ejecutar, desde el directorio bin, el script actual usando la Shell.    
  
-Ejecute entonces el siguiente código para llamar a nano en la terminal y escriba el siguiente script. Recuerde guardar el script con el nombre **“script1.sh”** usando **Ctrl+O**, luego salga de nano usando **Ctrl+X**.  
+Ejecuta el siguiente código para llamar a nano en la terminal y escribe el siguiente script. Recuerda guardar el script con el nombre **“script1.sh”** usando **Ctrl+O**, luego sal de nano usando **Ctrl+X**.  
 
 `**nano script1.sh**`  
 
@@ -150,15 +163,15 @@ Ejecute entonces el siguiente código para llamar a nano en la terminal y escrib
 echo Curso de Genómica  
 ```
 
-Ejecute el script desde la terminal usando,    
+Ejecuta el script desde la terminal usando,    
 
 `**bash script1.sh**`
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20nano.png)   
 
-### SRA Toolkit
-   
+### SRA Toolkit     
 SRA Toolkit es una herramienta que permite descargar y convertir automáticamente archivos en formato .SRA en otros formatos usando un interprete de comandos y de manera automática. Este es compatible con Linux, Windows y Mac. 
+
 Usar los comandos **wget** y **tar** para descargar y descomprimir **_SRA Toolkit_**.
 
 `nano script1.sh`  
