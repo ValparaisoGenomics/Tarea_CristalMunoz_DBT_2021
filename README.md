@@ -155,7 +155,7 @@ Usando nano se creará un script denominado **script1.sh**. En este script ejecu
  
 Ejecuta el siguiente código para llamar a nano en la terminal y escribe el siguiente script. Recuerda guardar el script con el nombre **“script1.sh”** usando **Ctrl+O**, luego sal de nano usando **Ctrl+X**.  
 
-`**nano script1.sh**`  
+`nano script1.sh`  
 
 ```
 # !/bin/bash    
@@ -165,7 +165,7 @@ echo Curso de Genómica
 
 Ejecuta el script desde la terminal usando,    
 
-`**bash script1.sh**`
+`bash script1.sh`
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20nano.png)   
 
