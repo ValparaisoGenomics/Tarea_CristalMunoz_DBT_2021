@@ -15,7 +15,8 @@ _Cristal Muñoz Rojas_
   - [WinSCP](#WinSCP)  
   - [POMEO](#Acceso-remoto-a-servidor-POMEO)
   - [Miniconda3](#Miniconda3)
-  -   
+  - [nano](#nano)  
+  - [SRA Toolkit](#SRA-Toolkit)  
 - [_**Práctica de Shell y Linux**_](#Práctica-de-Shell-y-Linux)
 - [_**Introducción al análisis de secuencias NGS**_](#Introducción-al-análisis-de-secuencias-NGS)  
 - [_**Introducción al análisis de secuencias NGS - Alineamiento**_  ](#Introducción-al-análisis-de-secuencias-NGS---Alineamiento)  
@@ -97,9 +98,7 @@ Ingresar al siguiente link https://winscp.net/eng/download.php  y hacer click en
  
  ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalaci%C3%B3n%20WinSCP.png) 
 
-### Acceso remoto a servidor POMEO
-
-- **SSH**      
+### Acceso remoto a servidor POMEO       
 
 Ingresar el Host Name **200.54.220.141**, seleccionar **POMEO** y hacer click en **DATA** Ingresar ususario y clave como se muesta en las imagenes: 
 
@@ -108,9 +107,7 @@ Ingresar el Host Name **200.54.220.141**, seleccionar **POMEO** y hacer click en
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Config%20pomeo%20usuario.png)  
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Config%20pomeo%20password.png)  
-
-
-### **Instalación y configuración CONDA, NANO Y SRA TOOLKIT**  
+ 
 
 ### Miniconda3  
 
@@ -137,7 +134,7 @@ bash Miniconda3-latest-Linux-x86_64.sh`
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalaci%C3%B3n%20miniconda%202.png)    
 
-- **nano**  
+### nano  
 
 Usando nano se creará un script denominado **script1.sh**. En este script ejecutaremos una simple impresión de la frase **_“Curso de Genomica”_** usando la función **echo**. La primera linea del script debe contener la siguiente instrucción **#!/bin/sh** a veces denominada **shebang**. Esta instrucción indica que se debe ejecutar, desde el directorio bin, el script actual usando la Shell.    
  
@@ -157,7 +154,7 @@ Ejecute el script desde la terminal usando,
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20nano.png)   
 
-- **SRA Toolkit** 
+### SRA Toolkit
    
 SRA Toolkit es una herramienta que permite descargar y convertir automáticamente archivos en formato .SRA en otros formatos usando un interprete de comandos y de manera automática. Este es compatible con Linux, Windows y Mac. 
 Usar los comandos **wget** y **tar** para descargar y descomprimir **_SRA Toolkit_**.
