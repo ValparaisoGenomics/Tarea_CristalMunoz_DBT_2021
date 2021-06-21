@@ -393,7 +393,7 @@ Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **
 ### Filtrado y poda  
 
 
-## _Introducción al análisis de secuencias NGS - Alineamiento_  
+## _Etapas de Alineamiento_  
 
 ### Conectar a servidor Pomeo  
 
