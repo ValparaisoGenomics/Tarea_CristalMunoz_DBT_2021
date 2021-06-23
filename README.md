@@ -274,7 +274,7 @@ La mayoría de los datos genómicos están almacenados en archivos de texto plan
 
 ## _Instalación y cofiguración de Software_
 
-Recuerda que debes ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conección remota en **POMEO**. Una vez iniciada tu sesión, **configura bioconda e instala el software** con los siguientes comandos:   
+Recuerda que debes ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conexión remota en **POMEO**. Una vez iniciada tu sesión, **configura bioconda e instala el software** con los siguientes comandos:   
 `conda config --add channels bioconda` 
 
 ### Control de calidad 
