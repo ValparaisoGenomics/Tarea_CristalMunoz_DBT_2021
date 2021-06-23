@@ -272,18 +272,21 @@ La mayoría de los datos genómicos están almacenados en archivos de texto plan
 | **ctrl-w -** | Borra la palabra inmediatamente detras del cursor |  
 | **exit** | Es un comando para cerrar la sesión |  
 
-## _Introducción al análisis de secuencias NGS_
+## _Instalación y cofiguración de Software_
 
-### Conección a servidor Pomeo, configuración de bioconda e instalación de software  
+Recuerda que debes ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conección remota en **POMEO**. Una vez iniciada tu sesión, **configura bioconda e instala el software** con los siguientes comandos:   
+`conda config --add channels bioconda` 
 
-Ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conección remota en **POMEO** como se especifica en la sección **Acceso remoto a servidor POMEO**. Una vez iniciada tu sesión, **configura bioconda e instala el software** con los siguientes comandos:  
-`conda config --add channels bioconda`  
+### Control de calidad 
+- FastQC    
+`conda install -c bioconda fastqc` 
 
-`conda install -c bioconda fastqc`  
-
-`conda install -c bioconda trimmomatic`  
+- Trimmomatic  
+`conda install -c bioconda trimmomatic` 
 
 ![img]()   
+
+### Alineamiento
  
 Usando el comando **mkdir** creas un directorio llamado **SRA_samples**    
 `mkdir SRA_samples`  
@@ -294,9 +297,11 @@ Luego accedes a este directorio con el comando:
 ![img]()  
 ![img]()  
 
-### Descarga de biomuestra desde SRA
+## _Etapas análisis de control de calidad, filtrado y poda_
 
-Trabajar con la biomuestra **SRR2006763** proveniente de la cepa Aquagen de _Salmo salar_. Se obtendrán los dos archivos **fastq**, los datos provienen de una secuenciación pair-end.
+### Descarga secuencias NGS usando SRA toolkit
+
+Trabaja con la biomuestra **SRR2006763** proveniente de la cepa Aquagen de _Salmo salar_. Obtendrás dos archivos **fastq**, (los datos que utilizarás provienen de una secuenciación pair-end)
 
 | Biomuestra 1 | SRR2006763_1.fastq |
 |  :---  |  :---  |   
@@ -321,8 +326,7 @@ _Ejemplo_
 /home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/prefetch --max-size 100G SRR2006763 -O /home2/cristal.munoz/SRA_samples/        
 /home2/cristal.munoz/sratoolkit.2.11.0-centos_linux64/bin/vdb-validate /home2/cristal.munoz/SRA_samples/SRR2006763/SRR2006763.sra      
 ```
-**Observación: Mantener las cuatro lineas al ingresar el script en nano**
- 
+
 Corre el script mediante el siguiente comando:  
 `bash download.sh`  
  
@@ -346,10 +350,8 @@ Recuerda que debes cambiar **_usuario_** por **tu_nombre_de_usuario**
  `bash fdump.sh`  
  
  ![img]() 
- 
-### Comprobación de integridad de archivos  
 
-**md5sum** es un algoritmo que se utiliza para evitar daños que pueden generarse durante el proceso de descarga de la biomuestra desde SRA.  
+Si lo deseas, puedes comprobar la integridad de los datos obtenidos utilizando **md5sum**, este algoritmo que se utiliza para evitar daños que pueden generarse durante el proceso de descarga de la biomuestra desde SRA.  
 
 Busca el código **Md5** de las muestras y direcciona la información a un archivo **md5_samples**, con el siguiente comando:    
 `md5sum SRR2006763_1.fastq SRR2006763_2.fastq > md5_samples`    
@@ -362,9 +364,9 @@ Verifica la salida generada con el comando; los valores de **md5** de las muestr
 Comprueba la integridad de ambas biomuestras usando **md5sum** o similar. El resultado se puede observar en la imagen.  
 `md5sum -c md5_samples`  
  
- ![img]()  
+ ![img]()   
  
- ### Análisis de control de calidad  
+### Análisis de control de calidad  
  
 Es recomendable realizar un análisis de control de calidad de secuencias **fastq** que provienen de **secuenciadores NGS**. Para esto, en el directorio **SRR2006763** debes crear y correr el siguiente script:    
  `nano fastqc.sh`  
@@ -382,24 +384,20 @@ La salida resultante de la ejecución del script anterior serán dos archivos:
 - **Archivo HTML**
 - **Archivo .zip**  
 
+### Filtrado y poda  
+
+### Transferencia de archivos de control de calidad mediante protocolo FTP desde servidor a cliente
+
 Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **POMEO**, como se señala a continuación: 
 
 - Ingresa al siguiente link http://200.54.220.141:8787/ (verifica que este conectado al puerto 8787).
 - Utiliza tus datos de usuario y clave de **POMEO**   
 - Haz click en la carpeta **SRA_SAMPLES**
 - Haz click en la carpeta **SRR2006763** 
-- Listo! ya encontraste tus archivos **HTML y ZIP**  
-
-### Filtrado y poda  
-
+- Listo! ya encontraste tus archivos **HTML y ZIP**    
 
 ## _Etapas de Alineamiento_  
 
-### Conectar a servidor Pomeo  
-
-Ingresa al servidor **POMEO** como se especifica en la sección **Acceso remoto a servidor POMEO**    
-
-![img]() 
 
 ### Configurar bioconda e instalar programas para análisis  
 
@@ -464,6 +462,8 @@ https://www.ncbi.nlm.nih.gov/genome/?term=salmo+salar; en este link encontraras 
 Una vez que ingresaste al genoma, debes dar clic en la opción **FASTA** localizada bajo el título e identificador RefSeq de la referencia y enviar la secuencia FASTA del genoma mitocondrial a un archivo, como se observa en la imagen.
 
 ![img]()  
+
+### Subir genoma a POMEO  
 
 Dirigete a la carpeta descargas de tu PC, encontrarás un archivo denominado **“sequence.fasta”**, cambia el nombre del archivo por **“mt.fasta”** y súbelo a **POMEO**.  
 Para llevar a cabo esta tarea, puedes utilizar **WINSCP**, para hacer uso de este software se debe realizar primero la tarea **"Intalación y configuración de Software para acceso remoto y transferencia de archivos"** o hacer la descarga e instalacion con el siguiente link:  https://winscp.net/eng/download.php
