@@ -22,7 +22,7 @@ _Cristal Muñoz Rojas_
   - [Atajos de teclado](#Atajos-del-teclado-para-trabajar-eficientemente-en-la-terminal)
 - [_**Instalación y cofiguración de Software**_](#Instalación-y-cofiguración-de-Software)  
   - [Control de calidad ](#Control-de-calidad)
-    -[FastQC](#FastQC)
+  - [Alineamiento](#Alineamiento)
 - [_**Introducción al análisis de secuencias NGS - Alineamiento**_  ](#Introducción-al-análisis-de-secuencias-NGS---Alineamiento)  
 
 
