@@ -20,7 +20,9 @@ _Cristal Muñoz Rojas_
 - [_**Práctica de Shell y Linux**_](#Práctica-de-Shell-y-Linux)
   - [Comandos básicos](#Comandos-básicos-para-trabajar-en-proyectos-de-genómica)
   - [Atajos de teclado](#Atajos-del-teclado-para-trabajar-eficientemente-en-la-terminal)
-- [_**Introducción al análisis de secuencias NGS**_](#Introducción-al-análisis-de-secuencias-NGS)  
+- [_**Instalación y cofiguración de Software**_](#Instalación-y-cofiguración-de-Software)  
+  - [Control de calidad ](#Control-de-calidad)
+    -[FastQC](#FastQC)
 - [_**Introducción al análisis de secuencias NGS - Alineamiento**_  ](#Introducción-al-análisis-de-secuencias-NGS---Alineamiento)  
 
 
@@ -287,14 +289,35 @@ Recuerda que debes ingreasar a **PuTTY**, el cual se encuentra previamente insta
 ![img]()   
 
 ### Alineamiento
+- BWA  
+`conda install -c bioconda bwa`
+
+![img]() 
+
+- Samtools   
+`conda install -c bioconda samtools`  
+
+`conda config --add channels bioconda`  
+
+`conda config --add channels conda-forge`  
+
+`conda install samtools==1.11`  
+
+![img]()     
  
-Usando el comando **mkdir** creas un directorio llamado **SRA_samples**    
-`mkdir SRA_samples`  
+Puedes revisar la ruta de instalación de un programa determinado utilizando el comando **“whereis”** en la terminal, junto a el programa del cual quieres obtener la ruta.  
+*Ejemplo*    
+`whereis sratoolkit`  
 
-Luego accedes a este directorio con el comando:   
-`cd SRA_samples`  
+`whereis samtools`  
 
-![img]()  
+`whereis bwa`  
+
+![img]()   
+
+Y la salida de cada comando te indicará la ruta de instalación.    
+`/home2/usuario/miniconda3/bin/bwa`  
+
 ![img]()  
 
 ## _Etapas análisis de control de calidad, filtrado y poda_
@@ -399,45 +422,7 @@ Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **
 ## _Etapas de Alineamiento_  
 
 
-### Configurar bioconda e instalar programas para análisis  
 
-*Primero*: Configurar el canal **bioconda** ejecutando el siguiente comando:   
-`conda config --add channels bioconda`   
-
-![img]() 
-
-*Segundo*: Instala los software **bwa**  
-`conda install -c bioconda bwa`  
-
-![img]() 
-
-*Tercero*: Instalar **samtools** ejecutanda cada uno de los comandos que se entregan a continuación:  
-`conda install -c bioconda samtools`  
-
-`conda config --add channels bioconda`  
-
-`conda config --add channels conda-forge`  
-
-`conda install samtools==1.11`  
-
-![img]()   
-
-### Verificar directorios de instalación  
-
-Si deseas, puedes revisar la ruta de instalación de un programa determinado, para esto se utiliza el comando **“whereis”** en la terminal, junto a el programa del cual quieres obtener la ruta.  
-*Ejemplo*    
-`whereis sratoolkit`  
-
-`whereis samtools`  
-
-`whereis bwa`  
-
-![img]()   
-
-La salida de cada comando te indicará la ruta de instalación.    
-`/home2/usuario/miniconda3/bin/bwa`  
-
-![img]()  
 
 ### Creación de directorio de trabajo y descarga de datos para alineamiento  
 
@@ -532,7 +517,14 @@ También puedes realizar un análisis estadístico estandar con los siguientes c
 
 
 
+Usando el comando **mkdir** creas un directorio llamado **SRA_samples**    
+`mkdir SRA_samples`  
 
+Luego accedes a este directorio con el comando:   
+`cd SRA_samples`  
+
+![img]()  
+![img]()  
 
 
 
