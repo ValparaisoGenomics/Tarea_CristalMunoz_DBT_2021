@@ -280,21 +280,25 @@ Recuerda que debes ingreasar a **PuTTY**, el cual se encuentra previamente insta
 `conda config --add channels bioconda` 
 
 ### Control de calidad 
-- FastQC    
+- FastQC  
+   
 `conda install -c bioconda fastqc` 
 
 - Trimmomatic  
+
 `conda install -c bioconda trimmomatic` 
 
 ![img]()   
 
 ### Alineamiento
 - BWA  
+
 `conda install -c bioconda bwa`
 
 ![img]() 
 
 - Samtools   
+
 `conda install -c bioconda samtools`  
 
 `conda config --add channels bioconda`  
