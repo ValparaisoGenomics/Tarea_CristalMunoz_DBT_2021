@@ -301,7 +301,7 @@ Recuerda que debes ingreasar a **PuTTY**, el cual se encuentra previamente insta
 
 `conda install -c bioconda trimmomatic` 
 
-![img]()   
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/A2.png)     
 
 ### Alineamiento
 - BWA  
