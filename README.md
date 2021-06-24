@@ -446,9 +446,6 @@ Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **
 
 ## _Etapas de Alineamiento_  
 
-
-
-
 ### Creación de directorio de trabajo y descarga de datos para alineamiento  
 
 Primero consideraremos que las secuencias fastq originales obtenidas tiene muy buena calidad, por lo tanto trabajaremos directamente en ellas. Para llevar a cabo este trabajo, debemos trasladar los archivos a una nueva carpeta que denominaremos **"alineamiento"** y que sera creada en tu usuario de **home2** segun el siguiente comando:  
@@ -540,6 +537,18 @@ Ahora que ya tienes tus archivos **SAM/BAM** puedes observar tu archivo sam con 
 
 También puedes realizar un análisis estadístico estandar con los siguientes comandos:  
 `samtools flagstat SRR2006763.bam > muestra_stat.txt`  
+
+### Explorar alineamiento con samtools  
+| Comando | Función |
+|  :---  |  :---  |
+| samtools flags unmap| Proporciona los reads no mapeados |
+| samtools flags 77 | read 1 - emparejado no mapeado |
+| samtools flags 141 | read 2 - emparejado no mapeado |
+| samtools flags 99 | Reverse de un read 1 adecuadamente emparejado |
+| samtools view -f 66 SRR2006763.bam | head -n 10| Busca solo reads emparejados en el archivo bam | 
+
+
+
 
 
 
