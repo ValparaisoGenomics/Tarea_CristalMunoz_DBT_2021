@@ -545,7 +545,7 @@ También puedes realizar un análisis estadístico estandar con los siguientes c
 | samtools flags 77 | read 1 - emparejado no mapeado |
 | samtools flags 141 | read 2 - emparejado no mapeado |
 | samtools flags 99 | Reverse de un read 1 adecuadamente emparejado |
-| samtools view -f 66 SRR2006763.bam | head -n 10| Busca solo reads emparejados en el archivo bam | 
+| `samtools view -f 66 SRR2006763.bam | head -n 10`| Busca solo reads emparejados en el archivo bam | 
 
 
 
