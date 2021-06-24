@@ -413,6 +413,27 @@ La salida resultante de la ejecución del script anterior serán dos archivos:
 
 ### Filtrado y poda  
 
+Ejecuta nano  
+`nano trimm.sh`
+
+Luego, introduce y guarda la información del script como se detalla a continuación:  
+```
+#!/bin/bash
+#SBATCH - J trimm_usuario
+trimmomatic PE SRR2006763_1.fastq SRR2006763_2.fastq -baseout SRR20067634_filtered.fastq.gz SLIDINGWINDOW:5:25 MINLEN:60
+```  
+Obtendras el siguiente resultado, 4 archivos comprimidos:  
+- SRR20067634_filtered_1P.fastq.gz
+- SRR20067634_filtered_1U.fastq.gz
+- SRR20067634_filtered_2P.fastq.gz
+- SRR20067634_filtered_2U.fastq.gz  
+
+Luego debes descomprimir los archivos con el siguiente comando:    
+`gunzip SRR20067634_filtered_1P.fastq.gz`  
+
+Realiza nuevamente un análisis de calidad de las muestras y comparara con el reporte de calidad inicial (en un script o directamente en la terminal)   
+`fastqc  *.fastq.gz`
+
 ### Transferencia de archivos de control de calidad mediante protocolo FTP desde servidor a cliente
 
 Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **POMEO**, como se señala a continuación: 
@@ -440,8 +461,9 @@ Una vez creada la carpeta **alineamiento** debemos ingresar a ella y transferir 
 
 Lista tu carpeta de alineamiento para verificar que tienes lo necesario para el alineamiento, hasta ahora deben estar tus dos secuencias **“SRR2006763_1.fastq”** y **“SRR2006763_2.fastq”**  
 `ls`
+### Descarga genoma mitocondrial  
 
-Para continuar con la descarga de datos, haremos uso de el genoma de referencia de la **mitocondria de _Salmo salar_**. Realizaremos la descarga en la misma carpeta de **alineamiento**, para esto debes ingresar al siguiente link en tu navegador:   
+Haremos uso de el genoma de referencia de la **mitocondria de _Salmo salar_**. Realizaremos la descarga en la misma carpeta de **alineamiento**, para esto debes ingresar al siguiente link en tu navegador:   
 https://www.ncbi.nlm.nih.gov/genome/?term=salmo+salar; en este link encontraras el genoma de la mitocondria de _Salmo salar_, en una tabla que lista el genoma de referencia de esta especie donde se incluyen todos los cromosomas y el genoma de la mitocondria, buscarás "Name: **MT**" y haz clic en "RefSeq: **NC_001960.1**", puedes guiarte con las imagenes que estan a continuación:
 
 
@@ -476,7 +498,7 @@ La salida del comando dará como resultado **5 archivos** con extensiones **“a
 
 ![img]()
 
-### Alineamiento  
+### Alineamiento de secuencias contra genoma mitocondrial
 
 Para llevar a cabo el alineamiento se deben contemplar las siguientes etapas:
 
@@ -520,15 +542,6 @@ También puedes realizar un análisis estadístico estandar con los siguientes c
 `samtools flagstat SRR2006763.bam > muestra_stat.txt`  
 
 
-
-Usando el comando **mkdir** creas un directorio llamado **SRA_samples**    
-`mkdir SRA_samples`  
-
-Luego accedes a este directorio con el comando:   
-`cd SRA_samples`  
-
-![img]()  
-![img]()  
 
 
 
