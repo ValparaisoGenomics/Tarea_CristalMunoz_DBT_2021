@@ -308,7 +308,8 @@ Recuerda que debes ingreasar a **PuTTY**, el cual se encuentra previamente insta
 
 `conda install -c bioconda bwa`
 
-![img]() 
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/1.1.png) 
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/2.2.png)
 
 - Samtools   
 
