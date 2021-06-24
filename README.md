@@ -550,13 +550,17 @@ También puedes realizar un análisis estadístico estandar con los siguientes c
 
 ### Visualización de alineamiento con IGV
 
+Primero debes descargar el software **IGV** en el siguiente link: https://software.broadinstitute.org/software/igv/download, luego descargar desde **POMEO** a tu computador el archivo “bam” generado del alineamiento con su respectivo índice “.bam.bai”, para llevar a cabo la descarga ingresa a **WinSCP** haciendo uso del Host Name **200.54.220.141** e ingreasando tu nombre de usuario y clave. 
 
+Para cargar el genoma de referencia en IGV debes seguir los siguientes pasos:  
+1.- Seleccionar la opción “More” 
+2.- Selecciona el genoma de _**Salmo salar**_ (ICSASG_v2) y presiona Ok.
+3.- Selecciona el genoma de mitocondrial **NC_001960.1**  
 
+Una vez se cargue el genoma de _Salmo salar_ como el genoma mitocondrial seleccionado,se visualizará el alineamiento como en la imagen: 
+NOTA: El alineamiento toma su tiempo... ten paciencia. 
 
-
-
-
-
+![img]() 
 
 
 
