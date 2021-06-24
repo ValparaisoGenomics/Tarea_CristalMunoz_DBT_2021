@@ -23,7 +23,7 @@ _Cristal Muñoz Rojas_
 - [_**Instalación y cofiguración de Software**_](#Instalación-y-cofiguración-de-Software)  
   - [Control de calidad ](#Control-de-calidad)
   - [Alineamiento](#Alineamiento)
-- [_**Etapas análisis de control de calidad, filtrado y poda_](Etapas-análisis-de-control-de-calidad,-filtrado-y-poda)
+- [_**Análisis de control de calidad, filtrado y poda_](#Etapas-análisis-de-control-de-calidad,-filtrado-y-poda)
   - [Descarga secuencias NGS usando SRA toolkit](#Descarga-secuencias-NGS-usando-SRA-toolkit)
   - [Análisis de control de calidad](#Análisis-de-control-de-calidad)
   - [Filtrado y poda](#Filtrado-y-poda)
