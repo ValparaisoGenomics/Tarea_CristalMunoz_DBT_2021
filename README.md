@@ -294,6 +294,7 @@ Recuerda que debes ingreasar a **PuTTY**, el cual se encuentra previamente insta
 - FastQC  
    
 `conda install -c bioconda fastqc` 
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/A1-Conectar%20a%20servidor%20Pomeo.png) ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/A2.1.png) 
 
 - Trimmomatic  
 
