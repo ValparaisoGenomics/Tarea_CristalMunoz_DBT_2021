@@ -538,7 +538,7 @@ Ahora que ya tienes tus archivos **SAM/BAM** puedes observar tu archivo sam con 
 También puedes realizar un análisis estadístico estandar con los siguientes comandos:  
 `samtools flagstat SRR2006763.bam > muestra_stat.txt`  
 
-### Explorar alineamiento con samtools  
+### Exploración de alineamiento con samtools  
 | Comando | Función |
 |  :---  |  :---  |
 | samtools flags unmap| Proporciona los reads no mapeados |
@@ -547,6 +547,10 @@ También puedes realizar un análisis estadístico estandar con los siguientes c
 | samtools flags 99 | Reverse de un read 1 adecuadamente emparejado |  
 
 `samtools view -f 66 SRR2006763.bam | head -n 10` Busca solo reads emparejados en el archivo bam 
+
+### Visualización de alineamiento con IGV
+
+
 
 
 
