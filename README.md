@@ -23,8 +23,19 @@ _Cristal Muñoz Rojas_
 - [_**Instalación y cofiguración de Software**_](#Instalación-y-cofiguración-de-Software)  
   - [Control de calidad ](#Control-de-calidad)
   - [Alineamiento](#Alineamiento)
-- [_**Introducción al análisis de secuencias NGS - Alineamiento**_  ](#Introducción-al-análisis-de-secuencias-NGS---Alineamiento)  
-
+- [_**Etapas análisis de control de calidad, filtrado y poda_](Etapas-análisis-de-control-de-calidad,-filtrado-y-poda)
+  - [Descarga secuencias NGS usando SRA toolkit](#Descarga-secuencias-NGS-usando-SRA-toolkit)
+  - [Análisis de control de calidad](#Análisis-de-control-de-calidad)
+  - [Filtrado y poda](#Filtrado-y-poda)
+  - [Transferencia de archivos](#Transferencia-de-archivos-de-control-de-calidad-mediante-protocolo-FTP-desde-servidor-a-cliente)
+- [**Etapas de Alineamiento**](#Etapas-de-Alineamiento)
+  - [Directorio de trabajo y descarga de datos](#Creación-de-directorio-de-trabajo-y-descarga-de-datos-para-alineamiento)
+  - [Descarga genoma mitocondrial](#Descarga-genoma-mitocondrial)
+  - [Subir genoma a POMEO](#Subir-genoma-a-POMEO)
+  - [Indexación del genoma de referencia](#Indexación-del-genoma-de-referencia)
+  - [Alineamiento de secuencias contra genoma mitocondrial](#Alineamiento-de-secuencias-contra-genoma-mitocondrial)
+  - [Exploración de alineamiento con samtools](#Exploración-de-alineamiento-con-samtools)
+ 
 
 
 ## _Especie de importancia económica en producción animal_   
@@ -548,7 +559,7 @@ También puedes realizar un análisis estadístico estandar con los siguientes c
 
 `samtools view -f 66 SRR2006763.bam | head -n 10` Busca solo reads emparejados en el archivo bam 
 
-### Visualización de alineamiento con IGV
+## Visualización de alineamiento con IGV
 
 Primero debes descargar el software **IGV** en el siguiente link: https://software.broadinstitute.org/software/igv/download, luego descargar desde **POMEO** a tu computador el archivo “bam” generado del alineamiento con su respectivo índice “.bam.bai”, para llevar a cabo la descarga ingresa a **WinSCP** haciendo uso del Host Name **200.54.220.141** e ingreasando tu nombre de usuario y clave. 
 
