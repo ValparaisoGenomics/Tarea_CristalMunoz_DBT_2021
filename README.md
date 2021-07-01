@@ -718,7 +718,7 @@ Para realizar la visualización de variantes en IGV primero debes descargar el a
 
 ![img]()    
 
-
+En los siguientes videos se muesta la actividad **llamado de variantes** realizada en **PuTTY** 
 
 
 
