@@ -576,11 +576,147 @@ NOTA: El alineamiento toma su tiempo... ten paciencia.
 
 ![img]() 
 
+## Llamado de variantes
 
+Conectate al servidor **POMEO** y configura el canal bioconda con los siguientes comandos:  
+`conda config --add channels bioconda`  
 
+Instala los software **gatk4**  
+`conda install -c bioconda gatk4`  
 
+Instala **picard** tools
+`wget https://github.com/broadinstitute/picard/releases/download/2.8.1/picard.jar`  
 
+Y finalmente instala los software **vcftools**  
+`conda install -c bioconda vcftools`  
 
+### Directorio de trabajo variant_call 
+Para ingresar al directorio de trabajo variant_call utiliza los siguientes comandos: 
+
+`cd variant_call`  
+`ls -l -h`
+
+En variant_call encontrarás los archivos necesarios para poder llevar a cabo la actividad de variantes, las cuales se listan a continuación: 
+
+- **"SRR2006763.sort.bam"**: Obtenido con las actividades anteriores.
+- **ref_genome.fna**: Genoma de referencia de _Salmo salar_ en formato FASTA.
+ -**ref_genome.fna.fai**: Archivo indexado del genoma de referencia con 5 columna que corresponden a columnas **1= contig, 2 = tamaño, 3= ubicación, 4= basesPerLine y 5= bytesPerLine**.
+
+Puedes explorar los archivos **“ref_genome.fna”** y **“ref_genome.fna.bai”** con los comandos **less, head, tail**  
+```
+less ref_genome.fna
+less ref_genome.fna.fai
+
+head -n 20 ref_genome.fna
+head -n 30 ref_genome.fna.fai 
+
+tail -n 20 ref_genome.fna
+tail -n 20 ref_genome.fna.fai
+```
+
+El genoma de salmon presenta 29 cromosomas los cuales estan caracterizados, sin embargo posee un numero considerable de contigs sin mapear. Estos se identifican porque comienzan con NW, como el muestra el siguiente ejemplo **NW_012341867.1**.Puedes investigar los cromosomas del salmón con los siguientes comandos:   
+```
+grep 'NC_' ref_genome.fna
+grep -c 'NC_' ref_genome.fna
+
+grep 'NC_' ref_genome.fna.fai
+grep -c 'NC_' ref_genome.fna.fai
+```    
+Tambien, puedes buscar los contings no mapeados, de la especie de estudio, con los siguientes comandos:
+```
+grep -c 'NW_' ref_genome.fna
+grep -c 'NW_' ref_genome.fna.fai
+```
+### Llamado de variantes   
+Para realizar el llamado de variantes primero debes obtener un archivo que representa un **“diccionario de referencias”** del genoma de referencia, en este caso del salmón. Utiliza el siguiente comando:
+
+`java -jar picard.jar CreateSequenceDictionary R=ref_genome.fna O=ref_genome.dict`  
+Este comando te entregará un archivo con extensión .dict. `ref_genome.dict`   
+Explora este archivo con **less o head**.
+También puedes añadir grupos de reads al archivo sort bam con el siguiente comando: 
+
+`java -jar picard.jar AddOrReplaceReadGroups I=SRR2006763.sort.bam O=SSRR2006763_sorted_RG.bam ID=sample LB=Paired-end PL=Illumina PU=Unknown SM=sample`  
+
+Para indexar el archivo generado con Read groups utiliza el comando: 
+
+`samtools index SSRR2006763_sorted_RG.bam`
+
+Finalmente, para el llamado de variantes debes ejecutar el comando **HaplotypeCaller** del sofatware **GATK**. Ejecutar el siguiente comando que esta a continuación, que te permite hacer el llamado de variantes, este proceso demora aproximadamente una hora, ten paciencia... Una vez terminada la ejecución, lista el directorio con **ls** y verifica que el archivo de salida es el siguiente: **raw_variants.vcf**
+
+`gatk HaplotypeCaller -R ref_genome.fna -I SRR2006763_sorted_RG.bam -O raw_variants.vcf`  
+
+Observaciones: 
+Puedes explorar el archivo llamado de variantes con los comandos **less, head, tail**
+```
+less raw_variants.vcf
+
+head -n 30 raw_variants.vcf
+
+tail -n 30 raw_variants.vcf
+```
+**Comandos de utilidad**  
+Usa grep para contar el numero de lineas en el “vcf header”.  
+`grep "^#" -c  raw_variants.vcf`
+
+Ahora, usa grep para contar el número de variantes detectadas   
+`grep "^#" -c -v raw_variants.vcf`   
+
+Listar el nombre de esta muestra usando el siguiente comando    
+`grep "^#CHROM" raw_variants.vcf | cut -f 10-`  
+
+**¿Cómo entender la codificación de los archivos vcf?**
+
+La información de los archivos se encuentra codificada, sin embargo esta puede ser interpretada haciendo uso de diferentes comandos.  
+
+Para imprimir el nombre de las columnas del llamado de variantes podemos ejecutar el siguiente comando:  
+`grep "^#CHROM" raw_variants.vcf`
+
+Para listar las 10 primeras variantes el siguiente:
+`grep "^#" -v raw_variants.vcf | head`  
+
+Por último, podemos ejecutarcomandos para comprender la codificación de la columna INFO y FORMAT que contine la información del genotipo de la muestra para las primeras 10 variantes   
+```
+grep "##INFO" raw_variants.vcf
+
+grep "##FORMAT" raw_variants.vcf
+```
+Como mencionamos anteriormente, la calidad de las secuencias puede ser variada, una forma de filtrar la información es con el número de **reads** sobre los cuales se han identificado las variantes. En terminos sensillos, una mayor calidad estará dada por un alto número de reads.
+Puedes usar el siguiente comando para extraer las variantes con calidad mayor a 100.   
+```
+grep -v "#" raw_variants.vcf | awk '{if ($6 > 100 ) print }' > hq_variant.txt
+
+grep "NC_" -c -v hq_variant.txt
+grep "NW_" -c -v hq_variant.txt
+```
+### Análisis de variantes con vcftools
+vcftools es una herramienta de análisis de archivos vcf.
+
+Si buscas contar individuos y variantes de un archivo .vcf utiliza el siguiente comando:   
+`vcftools --vcf raw_variants.vcf`
+
+Si buscas determinar las frecuencias de todos los alelos, utiliza el siguiente comando:   
+`vcftools --vcf raw_variants.vcf --freq -c > hq.freqs.txt`
+
+Si quieres filtrar algún cromosoma en particular incluye el argumento **–chr**, o podemos 
+Si quieres excluir un genoma, como por ejemplo el mitocondrial utiliza **–not-chr**  
+_Ejemplos_    
+```
+vcftools --vcf raw_variants.vcf --chr NC_027300.1
+vcftools --vcf raw_variants.vcf --freq -c --chr NC_027300.1
+
+vcftools --vcf raw_variants.vcf –not-chr NC_001960.1
+vcftools --vcf raw_variants.vcf --freq -c --not-chr NC_001960.1
+```
+Por último, si buscas extraer solo los **INDELS** utiliza el argumento **–keep-only-indel** o solo los SNP **–remove-indels**
+_Ejemplo_   
+```
+vcftools --vcf raw_variants.vcf --freq -c --chr NC_027300.1 --keep-only-indel
+vcftools --vcf raw_variants.vcf --freq -c --chr NC_027300.1 --remove-indel
+```
+### Visualización de variantes con IGV
+Para realizar la visualización de variantes en IGV primero debes descargar el archivo **raw_variants.vcf** generado en el directorio **“variant_call”** para esto utiliza **WinSCP** y obtendras lo que se ve en la siguiente imagen. 
+
+![img]()    
 
 
 
