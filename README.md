@@ -313,15 +313,17 @@ Recuerda que debes ingreasar a **PuTTY**, el cual se encuentra previamente insta
 
 - Samtools   
 
-`conda install -c bioconda samtools`  
+`conda install -c bioconda samtools`    
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/2.3.1.png)  
 
-`conda config --add channels bioconda`  
+`conda config --add channels bioconda`    
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/2.3.2.png)     
 
-`conda config --add channels conda-forge`  
+`conda config --add channels conda-forge`      
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/2.3.3.png) 
 
-`conda install samtools==1.11`  
-
-![img]()     
+`conda install samtools==1.11`      
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/2.3.4.png)     
  
 Puedes revisar la ruta de instalación de un programa determinado utilizando el comando **“whereis”** en la terminal, junto a el programa del cual quieres obtener la ruta.  
 *Ejemplo*    
@@ -331,12 +333,8 @@ Puedes revisar la ruta de instalación de un programa determinado utilizando el 
 
 `whereis bwa`  
 
-![img]()   
-
 Y la salida de cada comando te indicará la ruta de instalación.    
-`/home2/usuario/miniconda3/bin/bwa`  
-
-![img]()  
+`/home2/usuario/miniconda3/bin/bwa`    
 
 ## _Etapas análisis de control de calidad, filtrado y poda_
 
@@ -398,12 +396,12 @@ Verifica la salida generada con el comando; los valores de **md5** de las muestr
 Comprueba la integridad de ambas biomuestras usando **md5sum** o similar. El resultado se puede observar en la imagen.  
 `md5sum -c md5_samples`  
  
- ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/4.3.png)   
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/4.3.png)   
  
 ### Análisis de control de calidad  
  
 Es recomendable realizar un análisis de control de calidad de secuencias **fastq** que provienen de **secuenciadores NGS**. Para esto, en el directorio **SRR2006763** debes crear y correr el siguiente script:    
- `nano fastqc.sh`  
+`nano fastqc.sh`  
 
 Luego, introduce y guarda la información del script como se detalla a continuación:  
 ```
@@ -471,27 +469,25 @@ Haremos uso de el genoma de referencia de la **mitocondria de _Salmo salar_**. R
 https://www.ncbi.nlm.nih.gov/genome/?term=salmo+salar; en este link encontraras el genoma de la mitocondria de _Salmo salar_, en una tabla que lista el genoma de referencia de esta especie donde se incluyen todos los cromosomas y el genoma de la mitocondria, buscarás "Name: **MT**" y haz clic en "RefSeq: **NC_001960.1**", puedes guiarte con las imagenes que estan a continuación:
 
 
-![img]()    
-![img]()  
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/4.2.png)    
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/4.3.png)  
 
 Una vez que ingresaste al genoma, debes dar clic en la opción **FASTA** localizada bajo el título e identificador RefSeq de la referencia y enviar la secuencia FASTA del genoma mitocondrial a un archivo, como se observa en la imagen.
 
-![img]()  
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/4.4.png)  
 
 ### Subir genoma a POMEO  
 
 Dirigete a la carpeta descargas de tu PC, encontrarás un archivo denominado **“sequence.fasta”**, cambia el nombre del archivo por **“mt.fasta”** y súbelo a **POMEO**.  
 Para llevar a cabo esta tarea, puedes utilizar **WINSCP**, para hacer uso de este software se debe realizar primero la tarea **"Intalación y configuración de Software para acceso remoto y transferencia de archivos"** o hacer la descarga e instalacion con el siguiente link:  https://winscp.net/eng/download.php
  
-Una instalado **WINSCP** debes iniciar sesión, con tus datos de usuario y clave de **POMEO**, guarda tus datos y conectarte como se indica en la siguiente imagen:
+Una vez instalado **WINSCP** debes iniciar sesión, con tus datos de usuario y clave de **POMEO**, guarda tus datos. Aquí encontrarás la interfaz de tu servidor con las carpetas que tienes creadas, en donde ingresarás en tu carpeta de alineamiento y arrastrarás el archivo descagado del genoma mitocondrial a la misma.  
 
-![img]()  
-![img]()  
-![img]()  
-
-Finalmente, encontrarás la interfaz de tu servidor con las carpetas que tienes creadas, aquí ingresarás en tu carpeta de alineamiento y arrastrarás el archivo descagado del genoma mitocondrial a la misma.
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/11-1.2.2.png)  
 
 Cuando termines lo anterior puedes ingresar a **POMEO**, listar tu carpeta de alineamiento con **ls** y verás tu archivo **“mt.fasta”** junto con tus secuencias fastq.  
+
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/4.5.png)  
 
 ### Indexación del genoma de referencia  
 
@@ -500,7 +496,7 @@ Ya incluiste a tu carpeta de **alineamiento** todos los archivos descritos en pa
 
 La salida del comando dará como resultado **5 archivos** con extensiones **“amb”,“ann”,“bwt”,“pac” y “sa”**  
 
-![img]()
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/indexaci%C3%B3n1.png)
 
 ### Alineamiento de secuencias contra genoma mitocondrial
 
@@ -529,18 +525,11 @@ samtools sort SRR2006763.bam -o SRR2006763.sort.bam
 samtools index SRR2006763.sort.bam  
 ```
 
-![img]()  
-
 Ejecuta tu script con bash  
-`bash aln_mt.sh`  
-
-![img]() 
+`bash aln_mt.sh`    
 
 Ahora que ya tienes tus archivos **SAM/BAM** puedes observar tu archivo sam con el comando **less** de linux   
-`less SRR2006763.sam` 
-
-![img]() 
-![img]() 
+`less SRR2006763.sam`   
 
 También puedes realizar un análisis estadístico estandar con los siguientes comandos:  
 `samtools flagstat SRR2006763.bam > muestra_stat.txt`  
