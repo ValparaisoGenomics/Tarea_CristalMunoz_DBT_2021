@@ -374,7 +374,7 @@ Corre el script mediante el siguiente comando:
 Cuando finalice la ejecución, lista la carpeta **SRA_samples** para comprobar que se creó el directorio de la secuencia descargada con el nombre **SRR2006763**, corroborar que dentro de este directorio se generó el archivo **SRR2006763.sra**, utiliza el siguiente comando:  
 `ls -l -h `  
 
-![img]()  
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/3BASH.png)  
 
 Luego debes acceder a la carpeta **SRR2006763** y crear el siguiente script (**nano fdump.sh**) que permitirá obtener los archivos fastq de la muestra **SRR2006763**.  
 ```
@@ -383,29 +383,24 @@ Luego debes acceder a la carpeta **SRR2006763** y crear el siguiente script (**n
 /home2/usuario/sratoolkit.2.11.0-centos_linux64/bin/fasterq-dump /home2/usuario/SRA_samples/SRR2006763/*.sra -O /home2/usuario/SRA_samples/SRR2006763/   
 ```
 Recuerda que debes cambiar **_usuario_** por **tu_nombre_de_usuario**    
-
- ![img]()  
- ![img]()  
  
- Finalmente, corre el script mediante el comando **bash fdump.sh**. Se extraerán los archivos **fastq** y se indicará el total de **read leidos y escritos**.  
- `bash fdump.sh`  
+Finalmente, corre el script mediante el comando **bash fdump.sh**. Se extraerán los archivos **fastq** y se indicará el total de **read leidos y escritos**.  
+`bash fdump.sh`  
  
- ![img]() 
+![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/4.png) 
 
 Si lo deseas, puedes comprobar la integridad de los datos obtenidos utilizando **md5sum**, este algoritmo que se utiliza para evitar daños que pueden generarse durante el proceso de descarga de la biomuestra desde SRA.  
 
 Busca el código **Md5** de las muestras y direcciona la información a un archivo **md5_samples**, con el siguiente comando:    
 `md5sum SRR2006763_1.fastq SRR2006763_2.fastq > md5_samples`    
  
-Verifica la salida generada con el comando; los valores de **md5** de las muestras se pueden observar en la imagen:   
+Verifica la salida generada con el comando; los valores de **md5** de las muestras.   
 `cat md5_samples`  
- 
- ![img]()  
- 
+  
 Comprueba la integridad de ambas biomuestras usando **md5sum** o similar. El resultado se puede observar en la imagen.  
 `md5sum -c md5_samples`  
  
- ![img]()   
+ ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/4.3.png)   
  
 ### Análisis de control de calidad  
  
