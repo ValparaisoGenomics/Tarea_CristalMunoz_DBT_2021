@@ -23,18 +23,23 @@ _Cristal Muñoz Rojas_
 - [_**Instalación y cofiguración de Software**_](#Instalación-y-cofiguración-de-Software)  
   - [Control de calidad ](#Control-de-calidad)
   - [Alineamiento](#Alineamiento)
-- [ **Análisis control de calidad, filtrado y poda** ](#Etapas-análisis-de-control-de-calidad,-filtrado-y-poda)
+- [ _**Análisis control de calidad, filtrado y poda** _](#Etapas-análisis-de-control-de-calidad,-filtrado-y-poda)
   - [Descarga secuencias NGS usando SRA toolkit](#Descarga-secuencias-NGS-usando-SRA-toolkit)
   - [Análisis de control de calidad](#Análisis-de-control-de-calidad)
   - [Filtrado y poda](#Filtrado-y-poda)
   - [Transferencia de archivos](#Transferencia-de-archivos-de-control-de-calidad-mediante-protocolo-FTP-desde-servidor-a-cliente)
-- [**Etapas de Alineamiento**](#Etapas-de-Alineamiento)
+- [_**Etapas de Alineamiento**_](#Etapas-de-Alineamiento)
   - [Directorio de trabajo y descarga de datos](#Creación-de-directorio-de-trabajo-y-descarga-de-datos-para-alineamiento)
   - [Descarga genoma mitocondrial](#Descarga-genoma-mitocondrial)
   - [Subir genoma a POMEO](#Subir-genoma-a-POMEO)
   - [Indexación del genoma de referencia](#Indexación-del-genoma-de-referencia)
   - [Alineamiento de secuencias contra genoma mitocondrial](#Alineamiento-de-secuencias-contra-genoma-mitocondrial)
   - [Exploración de alineamiento con samtools](#Exploración-de-alineamiento-con-samtools)
+- [_**Llamado de variantes**_](#Llamado-de-variantes)
+  - [Directorio de trabajo variant_call](#Directorio-de-trabajo-variant_call)
+  - [Variantes](#Llamado-de-variantes)
+  - [Análisis de variantes con vcftools](#Análisis-de-variantes-con-vcftools)
+  - [Visualización de variantes con IGV](#Visualización-de-variantes-con-IGV)
  
 
 
@@ -558,7 +563,7 @@ NOTA: El alineamiento toma su tiempo... ten paciencia.
 
 ![img]() 
 
-## Llamado de variantes
+## _Llamado de variantes_
 
 Conectate al servidor **POMEO** y configura el canal bioconda con los siguientes comandos:  
 `conda config --add channels bioconda`  
