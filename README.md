@@ -385,10 +385,8 @@ Luego debes acceder a la carpeta **SRR2006763** y crear el siguiente script (**n
 Recuerda que debes cambiar **_usuario_** por **tu_nombre_de_usuario**    
  
 Finalmente, corre el script mediante el comando **bash fdump.sh**. Se extraerán los archivos **fastq** y se indicará el total de **read leidos y escritos**.  
-`bash fdump.sh`  
+`bash fdump.sh`    
  
-![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/4.png) 
-
 Si lo deseas, puedes comprobar la integridad de los datos obtenidos utilizando **md5sum**, este algoritmo que se utiliza para evitar daños que pueden generarse durante el proceso de descarga de la biomuestra desde SRA.  
 
 Busca el código **Md5** de las muestras y direcciona la información a un archivo **md5_samples**, con el siguiente comando:    
