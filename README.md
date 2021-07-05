@@ -571,7 +571,7 @@ Conectate al servidor **POMEO** y configura el canal bioconda con los siguientes
 Instala los software **gatk4**  
 `conda install -c bioconda gatk4`  
 
-Instala **picard** tools
+Instala **picard** tools   
 `wget https://github.com/broadinstitute/picard/releases/download/2.8.1/picard.jar`  
 
 Y finalmente instala los software **vcftools**  
