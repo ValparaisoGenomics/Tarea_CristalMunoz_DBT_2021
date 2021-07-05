@@ -705,7 +705,6 @@ Para realizar la visualización de variantes en IGV primero debes descargar el a
 
 ![IGV](https://user-images.githubusercontent.com/84527684/124524519-67870900-ddc9-11eb-8f9d-e0593e2740a1.png)
 
-
 En los siguientes videos se muesta la actividad **llamado de variantes** realizada en **PuTTY** 
 
 
