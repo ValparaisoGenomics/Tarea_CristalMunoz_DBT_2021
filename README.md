@@ -709,7 +709,7 @@ En los siguientes videos se muesta la actividad **llamado de variantes** realiza
 
 [![ScreenShot](https://i9.ytimg.com/vi/TRrnx3fc4Kw/mq2.jpg?sqp=CITBjocG&rs=AOn4CLAou5sOaeQKRZgAg6bX1bYxUS8JlQ)](https://youtu.be/TRrnx3fc4Kw)
 [![ScreenShot](https://i9.ytimg.com/vi/eWTzYuQUwPg/mq2.jpg?sqp=CITBjocG&rs=AOn4CLDM4R2fHJDl_eAlVzualAr-daa2Mg)](https://youtu.be/eWTzYuQUwPg)
-
+[![Alt text](https://i9.ytimg.com/vi/TRrnx3fc4Kw/mq2.jpg?sqp=CITBjocG&rs=AOn4CLAou5sOaeQKRZgAg6bX1bYxUS8JlQ)](https://youtu.be/TRrnx3fc4Kw)
 
 
 
