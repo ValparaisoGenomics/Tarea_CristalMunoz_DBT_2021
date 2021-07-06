@@ -707,6 +707,9 @@ Para realizar la visualización de variantes en IGV primero debes descargar el a
 
 En los siguientes videos se muesta la actividad **llamado de variantes** realizada en **PuTTY** 
 
+[![ScreenShot](https://i9.ytimg.com/vi/TRrnx3fc4Kw/mq2.jpg?sqp=CITBjocG&rs=AOn4CLAou5sOaeQKRZgAg6bX1bYxUS8JlQ)](https://youtu.be/TRrnx3fc4Kw)
+
+
 
 
 
