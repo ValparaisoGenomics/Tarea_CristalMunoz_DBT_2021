@@ -628,7 +628,7 @@ Para indexar el archivo generado con Read groups utiliza el comando:
 
 `samtools index SSRR2006763_sorted_RG.bam`
 
-Finalmente, para el llamado de variantes debes ejecutar el comando **HaplotypeCaller** del sofatware **GATK**. Ejecutar el siguiente comando que esta a continuación, que te permite hacer el llamado de variantes, este proceso demora aproximadamente una hora, ten paciencia... Una vez terminada la ejecución, lista el directorio con **ls** y verifica que el archivo de salida es el siguiente: **raw_variants.vcf**
+Finalmente, para el llamado de variantes debes ejecutar el comando **HaplotypeCaller** del sofatware **GATK**, este proceso demora aproximadamente una hora, ten paciencia... Una vez terminada la ejecución, lista el directorio con **ls** y verifica que el archivo de salida es el siguiente: **raw_variants.vcf**
 
 `gatk HaplotypeCaller -R ref_genome.fna -I SRR2006763_sorted_RG.bam -O raw_variants.vcf`  
 
