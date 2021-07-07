@@ -40,6 +40,8 @@ _Cristal Muñoz Rojas_
   - [Variantes](#Llamado-de-variantes)
   - [Análisis de variantes con vcftools](#Análisis-de-variantes-con-vcftools)
   - [Visualización de variantes con IGV](#Visualización-de-variantes-con-IGV)
+- []()
+  - []()
  
 
 
@@ -205,21 +207,25 @@ Moverse al directorio **/sratoolkit.2.10.5-centos_linux64** y configurar **SRAto
 
 `bin/vdb-config --interactive`
 
-Ejecute el siguiente comando para probar que **SRAToolkit** está trabajando correctamente.  
+Ejecute el siguiente comando para probar que **SRAToolkit** está trabajando correctamente.   
+
 `fastq-dump --stdout SRR390728 | head -n 8`
 
 Si todo va bien con esta muestra continue con los siguientes comandos, alternativamente agregue **bin/** al inicio del comando.
 
-El primero descarga y muestra el contenido: **5 primeras secuencias del archivo SRR6019464.**  
+El primero descarga y muestra el contenido: **5 primeras secuencias del archivo SRR6019464.**
+
 `fastq-dump -X 5 -Z SRR6019464`  
 
 El segundo descarga el contenido de las 5 primeras secuencias y las almacena en un archivo con formato **fastq**  
 `fastq-dump -X 5 SRR6019464`  
 
-El tercero descarga la biomuestra completa, detenga la ejecución luego de unos momentos, son 65 GB de datos.  
+El tercero descarga la biomuestra completa, detenga la ejecución luego de unos momentos, son 65 GB de datos. 
+
 `fastq-dump --gzip --split-3 SRR6019464`  
 
 Finalmente explore la muesta con **zcat** y chequee el número de read descargados.  
+
 `zcat SRR6019464.fastq.gz | echo $((`wc -l`/4))`
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%209/Instalacion%20SRA.png)   
@@ -231,49 +237,63 @@ Finalmente explore la muesta con **zcat** y chequee el número de read descargad
 Ejecutar los siguientes comandos en la terminal:
 
 **bash –version** indica información de la versión del software **bash**  
+
 `bash --version`
 
-**pwd - present working directory-** es un comando que indica el nombre del directorio en el que se encuentra.    
+**pwd - present working directory-** es un comando que indica el nombre del directorio en el que se encuentra. 
+
 `pwd`
 
-Informa acerca del espacio total en el sistema, espacio usado, espacio disponible    
+Informa acerca del espacio total en el sistema, espacio usado, espacio disponible  
+
 `df -hP`
 
 **Evalua el performance de la CPU, similar al monitor del sistema**  
+
 `top`  
 (para salir presiona q)  
 
 Crea un directorio de trabajo denominado tesis    
+
 `mkdir tesis`  
 
 Cambia al directorio tesis    
+
 `cd tesis`
 
-**cd ..** es un comando para volver al directorio anterior, luego intenta regresar a tu cuenta de usuario.    
+**cd ..** es un comando para volver al directorio anterior, luego intenta regresar a tu cuenta de usuario.  
+
 `cd ..`     
 `cd nombre.usuario`
 
 Al usar el simbolo **>** que funciona como una tibería la información del espacio total del sistema se almacena en un documento de texto denominado **espacio_libre_pomeo.txt**   
+
 `df -hP > espacio_libre_pomeo.txt`  
 
 La mayoría de los datos genómicos están almacenados en archivos de texto plano o formato de texto por lo que es conveniente aprender a leer los archivos usando diferentes comandos
 
-**cat** lee datos de un archivo e imprime su contenido en la terminal.     
+**cat** lee datos de un archivo e imprime su contenido en la terminal. 
+
 `cat espacio_libre.txt`
 
-**less** lee datos de un archivo sin imprimir en la terminal. Podemos entonces recorrer el archivo.    
+**less** lee datos de un archivo sin imprimir en la terminal. Podemos entonces recorrer el archivo. 
+
 `less espacio_libre.txt`
 
-**wc** cuenta líneas, palabras y caracteres de un fichero.    
+**wc** cuenta líneas, palabras y caracteres de un fichero.   
+
 `wc espacio_libre.txt`
 
 **ls** es un comando de listado de objetos en un directorio (home 2 indica los usuarios) (en ~ indica los programas y ficheros que existen)    
+
 `ls`  
 
-**ls -l -h** entrega información con mas detalle de los objetos y de un tamaño que sea legible por humanos.    
+**ls -l -h** entrega información con mas detalle de los objetos y de un tamaño que sea legible por humanos.  
+
 `ls -l -h`
 
-**rm -r** es un comando para remover un fichero o directorio forzando la acción. Pruebe borrar el directorio llamado tesis    
+**rm -r** es un comando para remover un fichero o directorio forzando la acción. Pruebe borrar el directorio llamado tesis   
+
 `rm tesis`
 `rm -r tesis`  
 
@@ -293,6 +313,7 @@ La mayoría de los datos genómicos están almacenados en archivos de texto plan
 ## _Instalación y cofiguración de Software_
 
 Recuerda que debes ingreasar a **PuTTY**, el cual se encuentra previamente instalado en tu PC, e iniciar conexión remota en **POMEO**. Una vez iniciada tu sesión, **configura bioconda e instala el software** con los siguientes comandos:   
+
 `conda config --add channels bioconda` 
 
 ### Control de calidad 
@@ -352,6 +373,7 @@ Trabaja con la biomuestra **SRR2006763** proveniente de la cepa Aquagen de _Salm
 | Biomuestra 2 | SRR2006763_2.fastq |  
 
 Créa un archivo ejecutable **(.sh)** con nano denominado **download.sh** utilizando el siguiente comando:  
+
 `nano download.sh`
 
 Introduce y guarda la información del script como se detalla a continuación:
@@ -372,9 +394,11 @@ _Ejemplo_
 ```
 
 Corre el script mediante el siguiente comando:  
+
 `bash download.sh`  
  
 Cuando finalice la ejecución, lista la carpeta **SRA_samples** para comprobar que se creó el directorio de la secuencia descargada con el nombre **SRR2006763**, corroborar que dentro de este directorio se generó el archivo **SRR2006763.sra**, utiliza el siguiente comando:  
+
 `ls -l -h `  
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/3BASH.png)  
@@ -393,19 +417,23 @@ Finalmente, corre el script mediante el comando **bash fdump.sh**. Se extraerán
 Si lo deseas, puedes comprobar la integridad de los datos obtenidos utilizando **md5sum**, este algoritmo que se utiliza para evitar daños que pueden generarse durante el proceso de descarga de la biomuestra desde SRA.  
 
 Busca el código **Md5** de las muestras y direcciona la información a un archivo **md5_samples**, con el siguiente comando:    
+
 `md5sum SRR2006763_1.fastq SRR2006763_2.fastq > md5_samples`    
  
 Verifica la salida generada con el comando; los valores de **md5** de las muestras.   
+
 `cat md5_samples`  
   
 Comprueba la integridad de ambas biomuestras usando **md5sum** o similar. El resultado se puede observar en la imagen.  
+
 `md5sum -c md5_samples`  
  
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2010/4.3.png)   
  
 ### Análisis de control de calidad  
  
-Es recomendable realizar un análisis de control de calidad de secuencias **fastq** que provienen de **secuenciadores NGS**. Para esto, en el directorio **SRR2006763** debes crear y correr el siguiente script:    
+Es recomendable realizar un análisis de control de calidad de secuencias **fastq** que provienen de **secuenciadores NGS**. Para esto, en el directorio **SRR2006763** debes crear y correr el siguiente script:   
+
 `nano fastqc.sh`  
 
 Luego, introduce y guarda la información del script como se detalla a continuación:  
@@ -424,6 +452,7 @@ La salida resultante de la ejecución del script anterior serán dos archivos:
 ### Filtrado y poda  
 
 Ejecuta nano  
+
 `nano trimm.sh`
 
 Luego, introduce y guarda la información del script como se detalla a continuación:  
@@ -439,9 +468,11 @@ Obtendras el siguiente resultado, 4 archivos comprimidos:
 - SRR20067634_filtered_2U.fastq.gz  
 
 Luego debes descomprimir los archivos con el siguiente comando:    
+
 `gunzip SRR20067634_filtered_1P.fastq.gz`  
 
-Realiza nuevamente un análisis de calidad de las muestras y comparara con el reporte de calidad inicial (en un script o directamente en la terminal)   
+Realiza nuevamente un análisis de calidad de las muestras y comparara con el reporte de calidad inicial (en un script o directamente en la terminal)  
+
 `fastqc  *.fastq.gz`
 
 ### Transferencia de archivos de control de calidad mediante protocolo FTP desde servidor a cliente
@@ -459,20 +490,24 @@ Para acceder a los archivos se puede utilizar **Rstudio server** instalado en **
 ### Creación de directorio de trabajo y descarga de datos para alineamiento  
 
 Primero consideraremos que las secuencias fastq originales obtenidas tiene muy buena calidad, por lo tanto trabajaremos directamente en ellas. Para llevar a cabo este trabajo, debemos trasladar los archivos a una nueva carpeta que denominaremos **"alineamiento"** y que sera creada en tu usuario de **home2** segun el siguiente comando:  
+
 `mkdir alineamiento`  
 
 Una vez creada la carpeta **alineamiento** debemos ingresar a ella y transferir los archivos de clase anterior, haciendo uso de los siguientes comandos en la terminal:  
-`mv /home2/usuario/SRA_samples/SRR2006763/SRR2006763_1.fastq /home2/usuario/alineamiento/`  
+```
+mv /home2/usuario/SRA_samples/SRR2006763/SRR2006763_1.fastq /home2/usuario/alineamiento/ 
 
-`mv /home2/usuario/SRA_samples/SRR2006763/SRR2006763_2.fastq /home2/usuario/alineamiento/`  
+mv /home2/usuario/SRA_samples/SRR2006763/SRR2006763_2.fastq /home2/usuario/alineamiento/
+```
 
 Lista tu carpeta de alineamiento para verificar que tienes lo necesario para el alineamiento, hasta ahora deben estar tus dos secuencias **“SRR2006763_1.fastq”** y **“SRR2006763_2.fastq”**  
+
 `ls`
+
 ### Descarga genoma mitocondrial  
 
 Haremos uso de el genoma de referencia de la **mitocondria de _Salmo salar_**. Realizaremos la descarga en la misma carpeta de **alineamiento**, para esto debes ingresar al siguiente link en tu navegador:   
 https://www.ncbi.nlm.nih.gov/genome/?term=salmo+salar; en este link encontraras el genoma de la mitocondria de _Salmo salar_, en una tabla que lista el genoma de referencia de esta especie donde se incluyen todos los cromosomas y el genoma de la mitocondria, buscarás "Name: **MT**" y haz clic en "RefSeq: **NC_001960.1**", puedes guiarte con las imagenes que estan a continuación:
-
 
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/4.2.png)    
 ![img](https://github.com/GenomicsEducation/Cristal04/blob/main/Capturas%20pantalla%20actividad%2011/4.3.png)  
@@ -497,6 +532,7 @@ Cuando termines lo anterior puedes ingresar a **POMEO**, listar tu carpeta de al
 ### Indexación del genoma de referencia  
 
 Ya incluiste a tu carpeta de **alineamiento** todos los archivos descritos en pasos anteriores, por lo tanto, podemos comenzar con la primera etapa del alineamiento, que corresponde a la indexación del genoma de referencia con **bwa** usando el siguiente comando:  
+
 `bwa index mt.fasta`  
 
 La salida del comando dará como resultado **5 archivos** con extensiones **“amb”,“ann”,“bwt”,“pac” y “sa”**  
@@ -514,7 +550,8 @@ Para llevar a cabo el alineamiento se deben contemplar las siguientes etapas:
 - Indexación con Samtools  
 - Exploración de datos con Samtools  
 
-Se pueden ejecutar todas la etapas mensionadas anteriormente, creando un **script** con **nano** denominado **aln_mt.sh**, como se muestra a continuación:  
+Se pueden ejecutar todas la etapas mensionadas anteriormente, creando un **script** con **nano** denominado **aln_mt.sh**, como se muestra a continuación: 
+
 `nano aln_mt.sh`
 
 En el script ingresar las siguientes instrucciones:  
@@ -531,9 +568,11 @@ samtools index SRR2006763.sort.bam
 ```
 
 Ejecuta tu script con bash  
+
 `bash aln_mt.sh`    
 
-Ahora que ya tienes tus archivos **SAM/BAM** puedes observar tu archivo sam con el comando **less** de linux   
+Ahora que ya tienes tus archivos **SAM/BAM** puedes observar tu archivo sam con el comando **less** de linux  
+
 `less SRR2006763.sam`   
 
 También puedes realizar un análisis estadístico estandar con los siguientes comandos:  
