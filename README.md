@@ -950,16 +950,15 @@ source("Admixture_plot.R")
 ![img 7](https://user-images.githubusercontent.com/84527684/124839505-e8bfd680-df56-11eb-8021-6f5c93b631e7.png)
 
 ```
-![img 6](https://user-images.githubusercontent.com/84527684/124839418-c0d07300-df56-11eb-82bd-747029e1b3df.png)
-
-```
- K6 <- read_delim("EU_OC_US.Thinned.6.Q", delim = " ", col_names = F)
- H <- admixtureplot(str_out = K6,k = 6, pops = pops, xaxis = T)
- H
+K6 <- read_delim("EU_OC_US.Thinned.6.Q", delim = " ", col_names = F)
+H <- admixtureplot(str_out = K6,k = 6, pops = pops, xaxis = T)
+H
 ```
 ![img 8](https://user-images.githubusercontent.com/84527684/124839595-10af3a00-df57-11eb-9a04-0dda318772b7.png)
 
 ### Videos actividad
-En los siguientes videso se muestra el desarrollo de toda la actividad **llamado de variantes** realizada en **PuTTY** 
+En los siguientes videso se muestra el desarrollo de toda la actividad **Genómica poblacional y ancestria** realizada en **PuTTY** y en **RStudio Cloud**  
+[![ScreenShot]()
+[![ScreenShot]()
 
 
