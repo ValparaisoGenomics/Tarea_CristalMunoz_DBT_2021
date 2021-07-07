@@ -784,7 +784,17 @@ het
 ```
 ![tabla 1](https://user-images.githubusercontent.com/84527684/124837682-523de600-df53-11eb-8977-de6807896efa.png)
 
-
+```
+het$Heterozygosity <- 1-(het$`O(HOM)`/het$N_SITES) 
+het$Population <- c(rep("EU",3),rep("OC",3),rep("US",3))
+A <- ggplot(het,aes(x = Population, y = Heterozygosity, col = Population)) +
+  geom_point()+
+  theme_bw()+
+  theme(legend.position = "none")+
+  xlab("")
+A
+```
+![img](https://613aceb00d0542228b4d9cbc90c07473.app.rstudio.cloud/chunk_output/s/856E76F6/ci1fp2e7lldru/000003.png)
 
 
 
