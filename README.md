@@ -711,9 +711,78 @@ En los siguientes videso se muestra el desarrollo de toda la actividad **llamado
 [![ScreenShot](https://i9.ytimg.com/vi/TRrnx3fc4Kw/mq2.jpg?sqp=CITBjocG&rs=AOn4CLAou5sOaeQKRZgAg6bX1bYxUS8JlQ)](https://youtu.be/TRrnx3fc4Kw)
 [![ScreenShot](https://i9.ytimg.com/vi/eWTzYuQUwPg/mq2.jpg?sqp=CITBjocG&rs=AOn4CLDM4R2fHJDl_eAlVzualAr-daa2Mg)](https://youtu.be/eWTzYuQUwPg)
 
+## _Genómica poblacional_
 
+Conectate al servidor **POMEO** y configura el canal bioconda con los siguientes comandos:    
+`conda config --add channels bioconda`  
 
+`conda install -c bioconda plink`  
 
+`conda install -c bioconda admixture`  
+Con estos comandos instalas los software plink y admixture. Posteriormente debes ingresar directorio de trabajo **population** el cual ya esta instalado en tu directorio personal, utiliza los siguientes comandos para ingresar al directorio y listar los archivos:    
+`cd population`  
+
+`ls -l -h`
+
+En el directorio **population** tienes los archivos necesarios para realizar los análisis poblacionales, haciendo uso de los software instalados anteriormente.
+
+| EU_OC_US.vcf | Archivo vcf que contiene las muestras provenientes de tres poblaciones de salmon del Atlantico (Salmo salar) |
+|  :---  |  :---  |
+| Europa | 2_WG0341511-DNA_A02_5408, 3_WG0341511-DNA_A03_5416, 5_WG0341511-DNA_A05_5450 |
+| Oceania | FR07958834, FR07958842, FR07958850 |
+| Norteamerica | GNB12-1, GNB12-10, GNB12-11 |
+
+Adicionalmente, contiene un **Script** para realizar los diagramas de admixture.
+
+**Admixture_plot.R:** Contiene el codigo para crear una funcion llamada admixtureplot (), utilizada para realizar los diagramas de admixture.
+
+### Análisis de diversidad  
+Estima el numero de sitios heterocigotos para cada individuo y la heterocigosidad observada y esperada para cada marcador
+
+```
+vcftools --vcf EU_OC_US.vcf --het --out EU_OC_US
+
+vcftools --vcf EU_OC_US.vcf --hardy --out EU_OC_US
+```
+Puedes utilizar **ls -l, head, cat, less, etc.**, segun corresponda, para explorar los archivos de salida de cada uno de estos analisis.
+
+Para calcular la diversidad en una ventana no superpuesta de 200 kb para cada individuo de las tres poblaciones, utiliando los siguientes comandos segun corresponda la población. 
+
+**Europa**  
+```
+vcftools --vcf EU_OC_US.vcf --window-pi 200000 --indv 2_WG0341511-DNA_A02_5408 --indv 3_WG0341511-DNA_A03_5416 --indv 5_WG0341511-DNA_A05_5450 --out EU
+```
+**Oceania**  
+```
+vcftools --vcf EU_OC_US.vcf --window-pi 200000 --indv FR07958834 --indv FR07958842 --indv FR07958850 --out OC
+```
+**Norteamerica**  
+```
+vcftools --vcf EU_OC_US.vcf --window-pi 200000 --indv GNB12-1 --indv GNB12-10 --indv GNB12-11 --out US
+```
+
+Para calcular el desequilibrio de ligamiento (LD) para las tres poblaciones, puedes hacer uso de los siguientes comandos: 
+
+**Europa**  
+```
+vcftools --vcf EU_OC_US.vcf --geno-r2 --chr 1 --ld-window-bp 100000 --min-r2 0.001 --indv 2_WG0341511-DNA_A02_5408 --indv 3_WG0341511-DNA_A03_5416 --indv 5_WG0341511-DNA_A05_5450 --out EU
+```
+**Oceania**  
+```
+vcftools --vcf EU_OC_US.vcf --geno-r2 --chr 1 --ld-window-bp 100000 --min-r2 0.001 --indv FR07958834 --indv FR07958842 --indv FR07958850 --out OC
+```
+**Norteamerica**  
+```
+vcftools --vcf EU_OC_US.vcf --geno-r2 --chr 1 --ld-window-bp 100000 --min-r2 0.001 --indv GNB12-1 --indv GNB12-10 --indv GNB12-11 --out US
+```
+### Heterogocidad individual
+Puedes observar los gráficos de heterogocidad individual, diversidad de nucleotidos y LD haciendo uso de **_RStudio Cloud_**, a continuación encuentras los codigos y los resultados de su ejecución en RStudio. 
+
+```
+het <- read_delim("EU_OC_US.het",delim = "\t")
+het
+```
+![tabla 1](https://user-images.githubusercontent.com/84527684/124837682-523de600-df53-11eb-8977-de6807896efa.png)
 
 
 
