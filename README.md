@@ -23,7 +23,7 @@ _Cristal Muñoz Rojas_
 - [_**Instalación y cofiguración de Software**_](#Instalación-y-cofiguración-de-Software)  
   - [Control de calidad ](#Control-de-calidad)
   - [Alineamiento](#Alineamiento)
-- [ _**Análisis control de calidad, filtrado y poda** _](#Etapas-análisis-de-control-de-calidad,-filtrado-y-poda)
+- [_**Análisis control de calidad, filtrado y poda** ](#Etapas-análisis-de-control-de-calidad,-filtrado-y-poda)
   - [Descarga secuencias NGS usando SRA toolkit](#Descarga-secuencias-NGS-usando-SRA-toolkit)
   - [Análisis de control de calidad](#Análisis-de-control-de-calidad)
   - [Filtrado y poda](#Filtrado-y-poda)
@@ -40,9 +40,13 @@ _Cristal Muñoz Rojas_
   - [Variantes](#Llamado-de-variantes)
   - [Análisis de variantes con vcftools](#Análisis-de-variantes-con-vcftools)
   - [Visualización de variantes con IGV](#Visualización-de-variantes-con-IGV)
-- []()
-  - []()
- 
+  - [Videos actividad](#Videos-actividad)
+- [_**Genómica poblacional**_](#Genómica-poblacional)
+  - [Análisis de diversidad ](#Análisis-de-diversidad)
+  - [Análisis de estructura poblacional](#Análisis-de-estructura-poblacional)
+  - [Análisis de admixture](#Análisis-de-admixture)
+  - [Visualización con RStudio Cloud](#Visualización-con-RStudio-Cloud)
+  - [Videos actividad](#Videos-actividad)
 
 
 ## _Especie de importancia económica en producción animal_   
@@ -500,9 +504,7 @@ mv /home2/usuario/SRA_samples/SRR2006763/SRR2006763_1.fastq /home2/usuario/aline
 mv /home2/usuario/SRA_samples/SRR2006763/SRR2006763_2.fastq /home2/usuario/alineamiento/
 ```
 
-Lista tu carpeta de alineamiento para verificar que tienes lo necesario para el alineamiento, hasta ahora deben estar tus dos secuencias **“SRR2006763_1.fastq”** y **“SRR2006763_2.fastq”**  
-
-`ls`
+Lista tu carpeta de alineamiento para verificar que tienes lo necesario para el alineamiento, hasta ahora deben estar tus dos secuencias **“SRR2006763_1.fastq”** y **“SRR2006763_2.fastq”**  `ls`
 
 ### Descarga genoma mitocondrial  
 
@@ -840,7 +842,7 @@ sexto, análisis de **PCA** (Principal Component Analysis)
 
 `plink --bfile EU_OC_US.FilteredPrunedUnrel --pca 4 --out EU_OC_US.FilteredPrunedUnrel --allow-extra-chr --chr-set 29`   
 
-### Analisis de admixture  
+### Análisis de admixture  
 
 Primero, debes seleccionar al azar del 1% de los marcadores   
 `plink --bfile EU_OC_US.FilteredPrunedUnrel --thin 0.01 --make-bed --out EU_OC_US.Thinned --allow-extra-chr --chr-set 29`
