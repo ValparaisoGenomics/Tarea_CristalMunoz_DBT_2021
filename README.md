@@ -561,7 +561,7 @@ Para cargar el genoma de referencia en IGV debes seguir los siguientes pasos:
 Una vez se cargue el genoma de _Salmo salar_ como el genoma mitocondrial seleccionado,se visualizará el alineamiento como en la imagen: 
 NOTA: El alineamiento toma su tiempo... ten paciencia. 
 
-![img]() 
+![igv](https://user-images.githubusercontent.com/84527684/124798600-88627200-df21-11eb-8bfd-557a42c41665.jpeg)   
 
 ## _Llamado de variantes_
 
