@@ -737,7 +737,7 @@ Adicionalmente, contiene un **Script** para realizar los diagramas de admixture.
 **Admixture_plot.R:** Contiene el codigo para crear una funcion llamada admixtureplot (), utilizada para realizar los diagramas de admixture.
 
 ### Análisis de diversidad  
-Estima el numero de sitios heterocigotos para cada individuo y la heterocigosidad observada y esperada para cada marcador
+Estima el número de sitios heterocigotos para cada individuo y la heterocigosidad observada y esperada para cada marcador
 
 ```
 vcftools --vcf EU_OC_US.vcf --het --out EU_OC_US
@@ -775,7 +775,49 @@ vcftools --vcf EU_OC_US.vcf --geno-r2 --chr 1 --ld-window-bp 100000 --min-r2 0.0
 ```
 vcftools --vcf EU_OC_US.vcf --geno-r2 --chr 1 --ld-window-bp 100000 --min-r2 0.001 --indv GNB12-1 --indv GNB12-10 --indv GNB12-11 --out US
 ```
-### Heterogocidad individual
+### Análisis de estructura poblacional
+Primero, debes generar el archivo de entrada en formato **plink**  
+`plink --vcf EU_OC_US.vcf --recode --out EU_OC_US --double-id --allow-extra-chr --chr-set 29`
+
+Segundo, debes generar el archivo de entrada en formato **plink binario**  
+`plink --file EU_OC_US --make-bed --out EU_OC_US --allow-extra-chr --chr-set 29`
+
+Tercero, debes filtrar en base al equilibrio de **Hardy-Weinberg y frecuencia del alelo menor**   
+`plink --bfile EU_OC_US --hwe 0.01 --maf 0.05 --make-bed --out EU_OC_US.Filtered --allow-extra-chr --chr-set 29`
+
+Cuarto, debes filtrar y excluir marcadores por **desequilibrio de ligamiento**   
+```
+plink --bfile EU_OC_US.Filtered --indep-pairwise 50 10 0.05 --make-bed --out EU_OC_US.Filtered --allow-extra-chr --chr-set 29
+
+plink --bfile EU_OC_US.Filtered --extract EU_OC_US.Filtered.prune.in --make-bed --out EU_OC_US.FilteredPruned --allow-extra-chr --chr-set 29
+```
+Quinto, debes filtrar para **remover individuos relacionados**   
+```
+plink --bfile EU_OC_US.FilteredPruned --rel-cutoff 0.4 --out EU_OC_US.FilteredPruned --allow-extra-chr --chr-set 29
+
+plink --bfile EU_OC_US.FilteredPruned --keep EU_OC_US.FilteredPruned.rel.id --make-bed --out EU_OC_US.FilteredPrunedUnrel --allow-extra-chr --chr-set 29
+```
+sexto, análisis de **PCA** (Principal Component Analysis)
+
+`plink --bfile EU_OC_US.FilteredPrunedUnrel --pca 4 --out EU_OC_US.FilteredPrunedUnrel --allow-extra-chr --chr-set 29`   
+
+### Analisis de admixture  
+
+Primero, debes seleccionar al azar del 1% de los marcadores   
+`plink --bfile EU_OC_US.FilteredPrunedUnrel --thin 0.01 --make-bed --out EU_OC_US.Thinned --allow-extra-chr --chr-set 29`
+
+Segundo, debes realizar un análisis de ancestria de 2 a 6 poblaciones
+```
+for K in `seq 2 6`;
+do
+admixture EU_OC_US.Thinned.bed $K;
+done
+```    
+**OBS:** ADMIXTURE genera 2 archivos: *.Q* que contiene asignaciones de grupos para cada individuo y *.P* que contiene para cada **SNP** las frecuencias alélicas de la población
+
+### Visualización con RStudio Cloud  
+
+**Heterogocidad individual**
 Puedes observar los gráficos de heterogocidad individual, diversidad de nucleotidos y LD haciendo uso de **_RStudio Cloud_**, a continuación encuentras los codigos y los resultados de su ejecución en RStudio. 
 
 ```
@@ -794,12 +836,130 @@ A <- ggplot(het,aes(x = Population, y = Heterozygosity, col = Population)) +
   xlab("")
 A
 ```
-![img](https://613aceb00d0542228b4d9cbc90c07473.app.rstudio.cloud/chunk_output/s/856E76F6/ci1fp2e7lldru/000003.png)
+![img 1](https://user-images.githubusercontent.com/84527684/124838042-08a1cb00-df54-11eb-9607-9c92abe60fbe.png)
 
+**Diversidad de nucleotidos**
+```
+pi_EU <- read_delim("EU.windowed.pi",delim = "\t")
+pi_EU
+```
+![tabla 2](https://user-images.githubusercontent.com/84527684/124838340-9d0c2d80-df54-11eb-9cef-36919cc90bf5.png)
 
+```
+pi_OC <- read_delim("OC.windowed.pi",delim = "\t")
+pi_OC
+```
+![tabla 3](https://user-images.githubusercontent.com/84527684/124838469-eceaf480-df54-11eb-9964-cc2060cc7cd0.png)
 
+```
+pi_US <- read_delim("US.windowed.pi",delim = "\t")
+pi_US
+```
+![tabla 4](https://user-images.githubusercontent.com/84527684/124838485-f4120280-df54-11eb-9dd1-b0184b579b27.png)
 
+```
+pi_all <- bind_rows(pi_EU,pi_OC,pi_US)
+pi_all$Population<-c(rep("EU",nrow(pi_EU)),rep("OC",nrow(pi_OC)),rep("US",nrow(pi_US)))
 
+B <- ggplot(pi_all,aes(x = Population, y = PI, col = Population))+
+      geom_jitter(col = "grey",width = 0.1)+ 
+      geom_boxplot(notch = T, alpha = 0,outlier.shape = NA)+ 
+      theme_bw()+
+      theme(legend.position = "none")+
+      xlab("")+
+      ylab(expression(pi))
+B
+```
+![img 2](https://user-images.githubusercontent.com/84527684/124838547-1441c180-df55-11eb-9bb4-0334d897cb38.png)
 
+**Desequilibrio de ligamiento**   
+```
+ld <- read_csv("EU_OC_US.windowed.ld.csv")
+ld
+```
+![tabla 5](https://user-images.githubusercontent.com/84527684/124838657-4bb06e00-df55-11eb-90bf-00f6cb0bc2ac.png)
+
+```
+C <- ggplot(ld,aes(x = dist/1000, y = meanR2, col = pop)) +
+      geom_point()+
+      geom_line()+
+      theme_bw()+
+      xlab("Distance (kb)")+
+      ylab(expression(R^2))+
+      scale_colour_discrete(name = "Population")
+C
+```
+![img 3](https://user-images.githubusercontent.com/84527684/124838723-6e428700-df55-11eb-8ce3-bbb7fb43d77c.png)
+
+**Gráfico de paneles múltiples**  
+
+![img 4](https://user-images.githubusercontent.com/84527684/124838791-903c0980-df55-11eb-8284-2782ff8ce5ba.png)
+
+**Gráficos de PCA**  
+```
+pca1 <- read_delim("EU_OC_US.FilteredPrunedUnrel.eigenvec", delim = " ",col_names = F)
+    head(pca1)
+```
+![tabla 6 1](https://user-images.githubusercontent.com/84527684/124839052-0b052480-df56-11eb-8f72-04e6077e7f2b.png)
+![tabla 6 2](https://user-images.githubusercontent.com/84527684/124839056-0d677e80-df56-11eb-952c-6f74d300d359.png)
+
+```
+colnames(pca1) <- c("Population","Individual",paste0("PC",c(1:4)))
+    head(pca1)
+```
+![tabla 7 1](https://user-images.githubusercontent.com/84527684/124839136-3982ff80-df56-11eb-8104-b0597d156bb7.png)
+![tabla 7 2](https://user-images.githubusercontent.com/84527684/124839143-3c7df000-df56-11eb-9fe8-10debd99d8e7.png)
+
+```
+mycols <- c("#a6cee3",
+              "#1f78b4",
+              "#b2df8a",
+              "#33a02c",
+              "#fb9a99",
+              "#e31a1c",
+              "#fdbf6f",
+              "#ff7f00",
+              "#cab2d6")
+
+    D <- ggplot(pca1,aes(x = PC1,y = PC2,col = Population))+
+      geom_point()+
+      theme_bw()+
+      scale_colour_manual(values = mycols)
+    D
+```
+![img 5](https://user-images.githubusercontent.com/84527684/124839200-591a2800-df56-11eb-89d2-df7f2886e914.png)
+
+**Gráficos de ADMIXTURE para 2, 4 y 6 poblaciones**  
+```
+library(readr)
+source("Admixture_plot.R")
+
+    pops <- read_delim("EU_OC_US.Thinned.fam", delim = " ",col_names = F)
+
+    K2 <- read_delim("EU_OC_US.Thinned.2.Q", delim = " ",col_names = F)
+    E <- admixtureplot(str_out = K2,k = 2, pops = pops, xaxis = F)
+    E
+```
+![img 6](https://user-images.githubusercontent.com/84527684/124839418-c0d07300-df56-11eb-82bd-747029e1b3df.png)
+
+```
+ K4 <- read_delim("EU_OC_US.Thinned.4.Q", delim = " ", col_names = F)
+ G <- admixtureplot(str_out = K4,k = 4, pops = pops, xaxis = F)
+ G
+```   
+![img 7](https://user-images.githubusercontent.com/84527684/124839505-e8bfd680-df56-11eb-8021-6f5c93b631e7.png)
+
+```
+![img 6](https://user-images.githubusercontent.com/84527684/124839418-c0d07300-df56-11eb-82bd-747029e1b3df.png)
+
+```
+ K6 <- read_delim("EU_OC_US.Thinned.6.Q", delim = " ", col_names = F)
+ H <- admixtureplot(str_out = K6,k = 6, pops = pops, xaxis = T)
+ H
+```
+![img 8](https://user-images.githubusercontent.com/84527684/124839595-10af3a00-df57-11eb-9a04-0dda318772b7.png)
+
+### Videos actividad
+En los siguientes videso se muestra el desarrollo de toda la actividad **llamado de variantes** realizada en **PuTTY** 
 
 
