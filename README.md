@@ -749,8 +749,8 @@ Para realizar la visualización de variantes en IGV primero debes descargar el a
 ### Videos actividad
 En los siguientes videos se muestra el desarrollo de toda la actividad **llamado de variantes** realizada en **PuTTY** 
 
-[![ScreenShot](https://i9.ytimg.com/vi/TRrnx3fc4Kw/mq2.jpg?sqp=CITBjocG&rs=AOn4CLAou5sOaeQKRZgAg6bX1bYxUS8JlQ)](https://youtu.be/TRrnx3fc4Kw)
-[![ScreenShot](https://i9.ytimg.com/vi/eWTzYuQUwPg/mq2.jpg?sqp=CITBjocG&rs=AOn4CLDM4R2fHJDl_eAlVzualAr-daa2Mg)](https://youtu.be/eWTzYuQUwPg)
+[![ScreenShot](https://i9.ytimg.com/vi/TRrnx3fc4Kw/mq2.jpg?sqp=CITBjocG&rs=AOn4CLAou5sOaeQKRZgAg6bX1bYxUS8JlQ)(https://youtu.be/TRrnx3fc4Kw)
+[![ScreenShot](https://i9.ytimg.com/vi/eWTzYuQUwPg/mq2.jpg?sqp=CITBjocG&rs=AOn4CLDM4R2fHJDl_eAlVzualAr-daa2Mg)(https://youtu.be/eWTzYuQUwPg)
 
 ## _Genómica poblacional_
 
@@ -858,7 +858,7 @@ done
 
 ### Visualización con RStudio Cloud  
 
-**Heterogocidad individual**
+**Heterogocidad individual**   
 Puedes observar los gráficos de heterogocidad individual, diversidad de nucleotidos y LD haciendo uso de **_RStudio Cloud_**, a continuación encuentras los codigos y los resultados de su ejecución en RStudio. 
 
 ```
@@ -999,7 +999,7 @@ H
 
 ### Videos actividad
 En los siguientes videos se muestra el desarrollo de toda la actividad **Genómica poblacional y ancestria** realizada en **PuTTY** y en **RStudio Cloud**  
-[![ScreenShot]()
-[![ScreenShot]()
+![ScreenShot](https://youtu.be/mxEkN1_237U)
+![ScreenShot](https://youtu.be/esVTvub_lo4)
 
 
