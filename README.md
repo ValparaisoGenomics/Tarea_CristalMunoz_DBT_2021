@@ -749,8 +749,8 @@ Para realizar la visualización de variantes en IGV primero debes descargar el a
 ### Videos actividad
 En los siguientes videos se muestra el desarrollo de toda la actividad **llamado de variantes** realizada en **PuTTY** 
 
-[![ScreenShot](https://i9.ytimg.com/vi/TRrnx3fc4Kw/mq2.jpg?sqp=CITBjocG&rs=AOn4CLAou5sOaeQKRZgAg6bX1bYxUS8JlQ)(https://youtu.be/TRrnx3fc4Kw)
-[![ScreenShot](https://i9.ytimg.com/vi/eWTzYuQUwPg/mq2.jpg?sqp=CITBjocG&rs=AOn4CLDM4R2fHJDl_eAlVzualAr-daa2Mg)(https://youtu.be/eWTzYuQUwPg)
+[![Watch the video](https://i9.ytimg.com/vi/TRrnx3fc4Kw/mq2.jpg?sqp=CKyCmYcG&rs=AOn4CLDDw57_E01DEuQSTww8-oIIxZxx5w)](https://youtu.be/TRrnx3fc4Kw)
+[![Watch the video](https://i9.ytimg.com/vi/eWTzYuQUwPg/mq2.jpg?sqp=CNiEmYcG&rs=AOn4CLBt1O4KBYb0X1UzISdOszoMgPel2A)](https://youtu.be/eWTzYuQUwPg)
 
 ## _Genómica poblacional_
 
@@ -998,8 +998,9 @@ H
 ![img 8](https://user-images.githubusercontent.com/84527684/124839595-10af3a00-df57-11eb-9a04-0dda318772b7.png)
 
 ### Videos actividad
-En los siguientes videos se muestra el desarrollo de toda la actividad **Genómica poblacional y ancestria** realizada en **PuTTY** y en **RStudio Cloud**  
-![ScreenShot](https://youtu.be/mxEkN1_237U)
-![ScreenShot](https://youtu.be/esVTvub_lo4)
+En los siguientes videos se muestra el desarrollo de toda la actividad **Genómica poblacional y ancestria** realizada en **PuTTY** y en **RStudio Cloud**   
+
+[![Watch the video](https://i9.ytimg.com/vi/mxEkN1_237U/mq2.jpg?sqp=CICAmYcG&rs=AOn4CLCuqPsrTws3mh7cmar6mcvAjWLXZg)](https://youtu.be/mxEkN1_237U)
+[![Watch the video](https://i9.ytimg.com/vi/esVTvub_lo4/mq3.jpg?sqp=CICAmYcG&rs=AOn4CLCxUl03tnPuNLXVx7qeXBaUg3XRXg)](https://youtu.be/esVTvub_lo4)
 
 
