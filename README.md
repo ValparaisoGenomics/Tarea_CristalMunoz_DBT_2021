@@ -23,7 +23,7 @@ _Cristal Muñoz Rojas_
 - [_**Instalación y cofiguración de Software**_](#Instalación-y-cofiguración-de-Software)  
   - [Control de calidad ](#Control-de-calidad)
   - [Alineamiento](#Alineamiento)
-- [_**Análisis control de calidad, filtrado y poda** ](#Etapas-análisis-de-control-de-calidad,-filtrado-y-poda)
+- [**_Análisis control de calidad, filtrado y poda_**](#Etapas-análisis-de-control-de-calidad,-filtrado-y-poda)
   - [Descarga secuencias NGS usando SRA toolkit](#Descarga-secuencias-NGS-usando-SRA-toolkit)
   - [Análisis de control de calidad](#Análisis-de-control-de-calidad)
   - [Filtrado y poda](#Filtrado-y-poda)
@@ -40,13 +40,13 @@ _Cristal Muñoz Rojas_
   - [Variantes](#Llamado-de-variantes)
   - [Análisis de variantes con vcftools](#Análisis-de-variantes-con-vcftools)
   - [Visualización de variantes con IGV](#Visualización-de-variantes-con-IGV)
-  - [Videos actividad](#Videos-actividad)
+  - [Videos llamado de variantes](#Videos-llamado-de-variantes)
 - [_**Genómica poblacional**_](#Genómica-poblacional)
   - [Análisis de diversidad ](#Análisis-de-diversidad)
   - [Análisis de estructura poblacional](#Análisis-de-estructura-poblacional)
   - [Análisis de admixture](#Análisis-de-admixture)
   - [Visualización con RStudio Cloud](#Visualización-con-RStudio-Cloud)
-  - [Videos actividad](#Videos-actividad)
+  - [Videos Genómica poblacional](#Videos-Genómica-poblacional)
 
 
 ## _Especie de importancia económica en producción animal_   
@@ -746,7 +746,7 @@ Para realizar la visualización de variantes en IGV primero debes descargar el a
 
 ![IGV](https://user-images.githubusercontent.com/84527684/124524519-67870900-ddc9-11eb-8f9d-e0593e2740a1.png)
 
-### Videos actividad
+### Videos llamado de variantes 
 En los siguientes videos se muestra el desarrollo de toda la actividad **llamado de variantes** realizada en **PuTTY** 
 
 [![Watch the video](https://i9.ytimg.com/vi/TRrnx3fc4Kw/mq2.jpg?sqp=CKyCmYcG&rs=AOn4CLDDw57_E01DEuQSTww8-oIIxZxx5w)](https://youtu.be/TRrnx3fc4Kw)
@@ -997,7 +997,7 @@ H
 ```
 ![img 8](https://user-images.githubusercontent.com/84527684/124839595-10af3a00-df57-11eb-9a04-0dda318772b7.png)
 
-### Videos actividad
+### Videos Genómica poblacional
 En los siguientes videos se muestra el desarrollo de toda la actividad **Genómica poblacional y ancestria** realizada en **PuTTY** y en **RStudio Cloud**   
 
 [![Watch the video](https://i9.ytimg.com/vi/mxEkN1_237U/mq2.jpg?sqp=CICAmYcG&rs=AOn4CLCuqPsrTws3mh7cmar6mcvAjWLXZg)](https://youtu.be/mxEkN1_237U)
