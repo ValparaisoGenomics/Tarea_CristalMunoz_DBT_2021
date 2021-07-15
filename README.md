@@ -1016,4 +1016,31 @@ Para llevar a cabo la simulación, utilizarás los sigientes datos:
 | **QTL y heredabilidad del rasgo pheno 1 QTLs** | 10, 1 por cromosoma |
 | **Heredabilidad** | 0.5 |
 
- A continuación puedes observar el informe realizado en **RStudio Cloud** de la actividad _**Introducción a los estudios de asociación genómica**_
+A continuación puedes observar los gráficos realizados en **RStudio Cloud** de la actividad _**Introducción a los estudios de asociación genómica**_
+
+### Librerias R
+Lo primero que debes hacer, es instalar las librerías necesarias en **RStudio Cloud**  
+```
+library(utils)
+library(rrBLUP)
+library(ggplot2)
+```
+### Importar y explorar archivo de genotipos y fenotipos
+
+Importa los archivos de genotipos **geno.txt** y fenotipos **Pheno.txt** usando la función **read.delim**.
+```
+geno <- read.delim("geno.txt", sep = "\t", dec = ",", header = T)
+pheno <- read.delim("pheno.txt", sep = "\t", dec = ",", header = T)
+```
+Luego realiza un análisis exploratorio de ambos set de datos con las funciones **head()**, **dim()**. También realice un histograma de la variable cuantitativa y del archivo pheno, use la función **hist()** utiizando los siguientes comandos:
+```
+dim(geno)
+dim(pheno)
+head(geno[1:6,1:6])
+head(pheno)
+```
+![1](https://user-images.githubusercontent.com/84527684/125855391-9ccae9b6-9fa0-4486-a49a-fe259ceb25ea.png)
+![2](https://user-images.githubusercontent.com/84527684/125855415-b86f28bc-8f8a-4e48-8c9d-6c5324a1d826.png)
+
+
+
