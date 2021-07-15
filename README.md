@@ -1042,5 +1042,65 @@ head(pheno)
 ![1](https://user-images.githubusercontent.com/84527684/125855391-9ccae9b6-9fa0-4486-a49a-fe259ceb25ea.png)
 ![2](https://user-images.githubusercontent.com/84527684/125855415-b86f28bc-8f8a-4e48-8c9d-6c5324a1d826.png)
 
+_**Preguntas**_
+
+**¿Cómo están codificados los genotipos de cada SNP?**   
+
+**¿Observa heterocigotos?**  
+
+### Histogramas
+
+```
+hist(pheno$y)
+```
+![3](https://user-images.githubusercontent.com/84527684/125856072-0e7d12f2-211e-4d0e-bb48-7440927a3d7a.png)
+
+Cálculo y gráfica matriz de parentesco genómico según método de Van Raden para 200 animales
+```
+A <- A.mat(geno[4:203]) 
+dim(A)
+A <- A.mat(geno[4:203]) 
+head(A)
+head(A[1:6,1:6])
+```
+```
+hist(A)
+```
+![4](https://user-images.githubusercontent.com/84527684/125856494-91840db3-7576-480b-98cf-0205fb6e49c0.png)
+
+```
+endogamia <- diag(A)
+hist(endogamia, main = "Histograma de endogamia")
+```
+![5](https://user-images.githubusercontent.com/84527684/125856583-af38a2b6-64e6-401d-b7bd-1f330566738d.png)
+
+_**Preguntas**_ 
+
+**¿Cuál es el nivel de endogamia promedio de esta población?.**     
+
+**¿Que significa un valor de endogamia de 1.1?**     
+
+**¿Que representa un valor de endogamia de 0.90?**   
+
+```
+score <- GWAS(pheno,geno, plot=TRUE)
+````
+![6](https://user-images.githubusercontent.com/84527684/125857022-dcfd6bf2-6895-4a1d-ab36-03bc1fc42c2d.png)
+
+**¿Cuantos QTLs fueron detectados por el análisis GWAS? ¿En qué cromosomas se encuentran?**
+
+### QTLs
+
+```
+head(score)
+```
+![7](https://user-images.githubusercontent.com/84527684/125857554-7f471528-089f-4131-9e8e-0cdb6c8d4faa.png)
+
+
+
+
+
+
+
 
 
