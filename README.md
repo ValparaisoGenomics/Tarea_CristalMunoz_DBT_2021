@@ -1100,7 +1100,7 @@ score <- GWAS(pheno,geno, plot=TRUE)
 ````
 ![6](https://user-images.githubusercontent.com/84527684/125857022-dcfd6bf2-6895-4a1d-ab36-03bc1fc42c2d.png)
 
-**¿Cuantos QTLs fueron detectados por el análisis GWAS? ¿En qué cromosomas se encuentran?**
+**¿Cuantos QTLs fueron detectados por el análisis GWAS? ¿En qué cromosomas se encuentran?**   
 Fueron detectados 2 QTLs en el cromosoma 3 y 10.    
 
 ### QTLs
