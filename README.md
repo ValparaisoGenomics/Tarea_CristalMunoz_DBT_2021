@@ -1007,16 +1007,13 @@ En los siguientes videos se muestra el desarrollo de toda la actividad **Genómi
 ## _Introducción a los estudios de asociación genómica_
 
 En esta prectica podrás realizar un análisis de asociación genómico usando datos simulados de **genotipos** y **fenotipos**.
-Para llevar a cabo la simulación de datos, utilizarás los sigientes datos
-
-**Genotipos geno** = Set de datos de genotipo con 200 animales endogámicos con 1000 SNP distribuidos en 10 cromosomas.
-
-**geno_inbred** = Set de datos de genotipo con 200 animales no endogámicos con 1000 SNP distribuidos en 10 cromosomas.
-
-**Fenotipos pheno** = Set de datos con variable cuantitativa continua y, con promedio 0 y varianza 5.
-
-**QTL y heredabilidad del rasgo pheno 1 QTLs**: 10, 1 por cromosoma.
-
-**Heredabilidad** = 0.5
+Para llevar a cabo la simulación, utilizarás los sigientes datos:
+| DATOS | DESCRIPCIÓN |
+|  :---  |  :---  |
+| **Genotipos geno** | Set de datos de genotipo con 200 animales endogámicos con 1000 SNP distribuidos en 10 cromosomas |
+| **geno_inbred** | Set de datos de genotipo con 200 animales no endogámicos con 1000 SNP distribuidos en 10 cromosomas |
+| **Fenotipos pheno** | Set de datos con variable cuantitativa continua y, con promedio 0 y varianza 5 |
+| **QTL y heredabilidad del rasgo pheno 1 QTLs** | 10, 1 por cromosoma |
+| **Heredabilidad** | 0.5 |
 
  A continuación puedes observar el informe realizado en **RStudio Cloud** de la actividad _**Introducción a los estudios de asociación genómica**_
