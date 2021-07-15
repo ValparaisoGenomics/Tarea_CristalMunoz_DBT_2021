@@ -47,6 +47,7 @@ _Cristal Muñoz Rojas_
   - [Análisis de admixture](#Análisis-de-admixture)
   - [Visualización con RStudio Cloud](#Visualización-con-RStudio-Cloud)
   - [Videos Genómica poblacional](#Videos-Genómica-poblacional)
+- [_**Introducción a los estudios de asociación genómica**_](#Introducción-a-los-estudios-de-asociación-genómica)
 
 
 ## _Especie de importancia económica en producción animal_   
@@ -1003,4 +1004,19 @@ En los siguientes videos se muestra el desarrollo de toda la actividad **Genómi
 [![Watch the video](https://i9.ytimg.com/vi/mxEkN1_237U/mq2.jpg?sqp=CICAmYcG&rs=AOn4CLCuqPsrTws3mh7cmar6mcvAjWLXZg)](https://youtu.be/mxEkN1_237U)
 [![Watch the video](https://i9.ytimg.com/vi/esVTvub_lo4/mq3.jpg?sqp=CICAmYcG&rs=AOn4CLCxUl03tnPuNLXVx7qeXBaUg3XRXg)](https://youtu.be/esVTvub_lo4)
 
+## _Introducción a los estudios de asociación genómica_
 
+En esta prectica podrás realizar un análisis de asociación genómico usando datos simulados de **genotipos** y **fenotipos**.
+Para llevar a cabo la simulación de datos, utilizarás los sigientes datos
+
+**Genotipos geno** = Set de datos de genotipo con 200 animales endogámicos con 1000 SNP distribuidos en 10 cromosomas.
+
+**geno_inbred** = Set de datos de genotipo con 200 animales no endogámicos con 1000 SNP distribuidos en 10 cromosomas.
+
+**Fenotipos pheno** = Set de datos con variable cuantitativa continua y, con promedio 0 y varianza 5.
+
+**QTL y heredabilidad del rasgo pheno 1 QTLs**: 10, 1 por cromosoma.
+
+**Heredabilidad** = 0.5
+
+ A continuación puedes observar el informe realizado en **RStudio Cloud** de la actividad _**Introducción a los estudios de asociación genómica**_
