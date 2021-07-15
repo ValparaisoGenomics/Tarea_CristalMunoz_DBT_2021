@@ -48,6 +48,10 @@ _Cristal Muñoz Rojas_
   - [Visualización con RStudio Cloud](#Visualización-con-RStudio-Cloud)
   - [Videos Genómica poblacional](#Videos-Genómica-poblacional)
 - [_**Introducción a los estudios de asociación genómica**_](#Introducción-a-los-estudios-de-asociación-genómica)
+  - [Librerias R](#Librerias-R)
+  - [Importar y explorar archivo de genotipos y fenotipos](#Importar-y-explorar-archivo-de-genotipos-y-fenotipos)
+  - [Histogramas](#Histogramas)
+  - [QTLs](#QTLs)
 
 
 ## _Especie de importancia económica en producción animal_   
@@ -1045,8 +1049,14 @@ head(pheno)
 _**Preguntas**_
 
 **¿Cómo están codificados los genotipos de cada SNP?**   
+Supuestos:
+- -1 Homocigoto Recesivo
+-  0 Heterocigoto
+-  1 Homocigoto Dominante   
+El animal 1 se puede observar que existe una variabilidad con respecto a los SNPs, Si consideranos los supuestos mensionados anteriormente, hay una predominancia de heterocigotos, seguido de homocigotos dominantes y luego un homocigoto recesivo. En el animal 2, solo presencia se heterocigotos. Y finalmente, en el animal 3 hay mayor predominancia de homocigoto recesivo, seguido de homocigoto dominante y sólo un heterocigoto.  
 
 **¿Observa heterocigotos?**  
+Si se observan heterocigotos, en las tres poblaciones pero en diferentes proporciones. 
 
 ### Histogramas
 
@@ -1076,11 +1086,14 @@ hist(endogamia, main = "Histograma de endogamia")
 
 _**Preguntas**_ 
 
-**¿Cuál es el nivel de endogamia promedio de esta población?.**     
+**¿Cuál es el nivel de endogamia promedio de esta población?.**   
+El nivel de endogamia de la población es practicamente nula, ya que los valores se eencuentran entre 0.9 y 1.1 en la población de estudio. 
 
-**¿Que significa un valor de endogamia de 1.1?**     
+**¿Que significa un valor de endogamia de 1.1?**    
+Que existe una posibilidad de endogamia en la población.   
 
 **¿Que representa un valor de endogamia de 0.90?**   
+Que no existe posibilidad de endogamia en la población.  
 
 ```
 score <- GWAS(pheno,geno, plot=TRUE)
@@ -1088,6 +1101,7 @@ score <- GWAS(pheno,geno, plot=TRUE)
 ![6](https://user-images.githubusercontent.com/84527684/125857022-dcfd6bf2-6895-4a1d-ab36-03bc1fc42c2d.png)
 
 **¿Cuantos QTLs fueron detectados por el análisis GWAS? ¿En qué cromosomas se encuentran?**
+Fueron detectados 2 QTLs en el cromosoma 3 y 10.    
 
 ### QTLs
 
@@ -1096,8 +1110,50 @@ head(score)
 ```
 ![7](https://user-images.githubusercontent.com/84527684/125857554-7f471528-089f-4131-9e8e-0cdb6c8d4faa.png)
 
+```
+dplyr::filter(score, y > 5)
+```
+![8](https://user-images.githubusercontent.com/84527684/125858133-638ecf9c-c2d9-4cc0-92b8-cf6b62a77a8b.png)  
 
+**¿Con que nivel de significancia se concluye que fueron significativos?**
+Con un nivel de significancia mayor a 5  
 
+```
+t_geno_300 <- t(geno[300,4:203])+1
+t_geno_1000 <- t(geno[1000,4:203])+1
+qtl <- data.frame(t_geno_300,t_geno_1000,pheno$y)
+
+head(qtl)
+```
+![9](https://user-images.githubusercontent.com/84527684/125858418-ce409a1b-7811-41c9-990d-1602f7a93f29.png)
+
+```
+qtl.1 <- ggplot(qtl, aes(x = X300, y = pheno.y))
+qtl.1 + geom_point() + xlab("snp 300") +  ylab("Pheno")+ geom_smooth(method=lm)
+```
+![10](https://user-images.githubusercontent.com/84527684/125858432-ebab98ac-6695-412d-87dc-b3173bf876a6.png)
+
+```
+qtl.2 <- ggplot(qtl, aes(x = X1000, y = pheno.y))
+qtl.2 + geom_point() + xlab("snp 1000") +  ylab("Pheno")+ geom_smooth(method=lm)
+```
+![11](https://user-images.githubusercontent.com/84527684/125858438-40b56a80-6c81-4cac-8098-7e6c09d5b5ea.png)
+
+```
+lm.qtl.300 <- lm(pheno.y ~ X300, data = qtl)
+summary(lm.qtl.300)
+```
+![12](https://user-images.githubusercontent.com/84527684/125858711-fb6981c9-4adf-4e2d-8d47-9e269b2b3481.png)
+
+_El efecto del snp300 sobre el rasgo cuantitativo 1.8121_
+
+```
+lm.qtl.1000 <- lm(pheno.y ~ X1000, data = qtl)
+summary(lm.qtl.1000)
+```
+![13](https://user-images.githubusercontent.com/84527684/125858856-5932a37a-404b-411a-9dee-a655a5ed328c.png)
+
+_El efecto del snp1000 sobre el rasgo cuantitativo 1.8549_
 
 
 
